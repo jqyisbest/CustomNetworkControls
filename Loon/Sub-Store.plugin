@@ -1,0 +1,27 @@
+#!name = Sub-Store
+#!desc = 高级订阅管理工具，使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!openUrl = https://sub.store
+#!author = Peng-YM[https://github.com/Peng-YM]
+#!tag = 订阅管理
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(749)
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png
+#!select = 节点缓存有效期, 1分钟, 5分钟, 10分钟, 30分钟, 1小时, 2小时, 3小时, 6小时, 12小时, 24小时, 48小时, 72小时
+#!select = 响应头缓存有效期, 1分钟, 5分钟, 10分钟, 30分钟, 1小时, 2小时, 3小时, 6小时, 12小时, 24小时, 48小时, 72小时
+#!date = 2024-10-22 14:00:18
+
+[Rule]
+DOMAIN, sub-store.vercel.app, PROXY
+DOMAIN, ip-api.com, PROXY
+
+[Script]
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/4cde3782ccc842ef7ea1a0fda51433228bf213b88165c75d34fb01755ef06165.js, requires-body = true, timeout = 120, tag = Sub-Store Core
+
+http-request ^https?:\/\/sub\.store script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/e75f6b9d12b45c65e920a81ed94e23c8939e79d7b47bee6c1eea4c74b89c4509.js, requires-body = true, timeout = 120, tag = Sub-Store Simple
+
+cron "0 0 1 ? * ?" script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/04eb30d0df6aabcea9f45b7e1d8c0387a5cc1692e2e76c10f92c74aa6cb812bc.js, tag = Sub-Store Sync
+
+[MitM]
+hostname = sub.store

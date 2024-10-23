@@ -1,0 +1,85 @@
+#!name=乐播投屏去广告
+#!desc=移除开屏广告、首页横幅推广、全网全网热投榜，移除我的页面横幅推广。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TV_Assistant.png
+#!category=iKeLee
+#!openUrl=https://apps.apple.com/app/id1116038378
+#!tag=去广告
+#!loon_version=3.2.1(749)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!date=2024-07-11 02:43:39
+
+[Rule]
+AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, normal,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
+AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
+AND, ((DOMAIN-KEYWORD, minigame,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
+AND, ((DOMAIN-KEYWORD, tnc,extended-matching), (AND, ((OR, ((DOMAIN-KEYWORD, -bjlgy,extended-matching), (DOMAIN-KEYWORD, -alisc,extended-matching), (DOMAIN-KEYWORD, -aliec,extended-matching))), (OR, ((DOMAIN-SUFFIX, snssdk.com,extended-matching), (DOMAIN-SUFFIX, toutiaoapi.com,extended-matching), (DOMAIN-SUFFIX, bytedance.com,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)))))), REJECT,pre-matching
+DOMAIN,mon.zijieapi.com,REJECT,extended-matching,pre-matching
+DOMAIN,mssdk-bu.bytedance.com,REJECT,extended-matching,pre-matching
+DOMAIN,toblog.ctobsnssdk.com,REJECT,extended-matching,pre-matching
+DOMAIN,lf-cdn-tos.bytescm.com,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,-fe-tos.pglstatp-toutiao.com,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao,REJECT,extended-matching,pre-matching
+DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao,REJECT,extended-matching,pre-matching
+# 快手联盟 - 广告服务商
+DOMAIN,gdfp.gifshow.com,REJECT,extended-matching,pre-matching
+DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
+# 百度联盟 - 广告服务商
+DOMAIN,mobads.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,mobads-logs.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,wn.pos.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,bgg.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,als.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN,feed-image.baidu.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,union.baidu.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,union.baidu.com,REJECT,extended-matching,pre-matching
+# 上海优比客思科技有限公司 - 广告服务商
+DOMAIN,tower.ubixioe.com,REJECT,extended-matching,pre-matching
+DOMAIN,sdk-data.ubixioe.com,REJECT,extended-matching,pre-matching
+# 袤博 - 广告服务商
+DOMAIN,api-c.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,api-d.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,api-p0.yksdks.com,REJECT,extended-matching,pre-matching
+DOMAIN,cache-verify.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,cdn-api-verify.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,devs-data.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,log-verify.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,m.mpl.dutils.com,REJECT,extended-matching,pre-matching
+DOMAIN,api.share.mob.com,REJECT,extended-matching,pre-matching
+DOMAIN,api.verify.mob.com,REJECT,extended-matching,pre-matching
+DOMAIN,log-verify.mob.com,REJECT,extended-matching,pre-matching
+DOMAIN,sdk.push.mob.com,REJECT,extended-matching,pre-matching
+# 友盟
+DOMAIN,cnlogs.umeng.com,REJECT,extended-matching,pre-matching
+DOMAIN,errlog.umeng.com,REJECT,extended-matching,pre-matching
+DOMAIN,ucc.umeng.com,REJECT,extended-matching,pre-matching
+DOMAIN,ulogs.umeng.com,REJECT,extended-matching,pre-matching
+DOMAIN,utoken.umeng.com,REJECT,extended-matching,pre-matching
+
+[Map Local]
+# 首页 - 弹窗
+^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_home_pop_up data-type=text data="{}" status-code=200
+
+# 首页 - 顶部横幅推广
+^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_home_tips data-type=text data="{}" status-code=200
+
+# 首页 - 底部横幅推广
+^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_index_operate2 data-type=text data="{}" status-code=200
+
+# 首页 - 全网热投榜
+^https:\/\/saas\.hpplay\.cn\/api\/lebo-rabbit\/app-card\/list data-type=text data="{}" status-code=200
+
+# 我的页面 - 横幅推广
+^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app-user-banner data-type=text data="{}" status-code=200
+
+[Script]
+# 移除底栏视频标签
+移除底栏视频标签 = type=http-response, pattern=^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_tab_red_dot\?user-tag=1$, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/9965f38d5752a0dc7a3f3a6763a1b3914daf0298badb5c7b13101a9292e14146.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% saas.hpplay.cn
+

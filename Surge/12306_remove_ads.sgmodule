@@ -1,0 +1,25 @@
+#!name=12306去广告
+#!desc=过滤12306应用内广告及开屏广告
+#!author=RuCu6[https://github.com/RuCu6]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/12306.png
+#!category=iKeLee
+#!openUrl=https://apps.apple.com/app/id564818797
+#!tag=去广告
+#!loon_version=3.2.1(749)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!date=2024-02-20 17:20:29
+
+[Rule]
+# 放行规则
+DOMAIN,ad.12306.cn,DIRECT,extended-matching
+
+[Script]
+# 移除12306开屏广告
+移除12306开屏广告 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/21da61f71984971874b4f88ed1aff49825511c3c8ccf5cee1cf4bb30f1e38d94.js, requires-body=true
+
+# 移除12306应用内广告
+移除12306应用内广告 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/ed8664768384a86cdc8b17d652a943ff68702ed83526bc6f73639af9b906d27a.js
+
+[MITM]
+hostname = %APPEND% ad.12306.cn, mobile.12306.cn
+

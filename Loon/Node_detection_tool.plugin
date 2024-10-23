@@ -1,0 +1,15 @@
+#!name = 节点检测工具
+#!desc = 适用于Loon的节点检测工具，可进行地理位置、节点解锁、节点网速等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
+#!openUrl = 
+#!author = KOP-XIAO[https://github.com/KOP-XIAO], xream[https://github.com/xream], Keywos[https://github.com/Keywos]
+#!tag = 节点检测
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(749)
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
+#!date = 2024-08-24 04:06:23
+
+[Script]
+generic script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/74ea26399b0e00d397391ca7bab4743c45b0db9d09f844826e44b4aa61f71ea5.js, timeout = 10, tag = 地理位置查询, img-url = location.circle.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/a4dc72f40ab2acc8bd3b578ded3fae7c9596429140e5a254ff9d01324bfb7f0b.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system

@@ -1,0 +1,72 @@
+name: Scheduled Script Execution
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #         - cron: '0 19 * * *'  # 每天早上3点（上海时间）
+  #         #- cron: '0 8 * * *'   # 每天下午4点（上海时间）
+  push:
+    paths:
+      - 'Loon/**'
+      - '*.py' 
+
+permissions:
+  contents: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: xream/script-hub:latest
+        ports:
+          - 9100:9100
+          - 9101:9101
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Wait for Docker service to be ready
+      # 延长等待时间，以确保服务完全启动
+      run: sleep 10
+
+    - name: Check Docker service status
+      # 可选：检查 Docker 是否运行，并查看其日志
+      run: docker ps -a
+
+    - name: Check Docker logs for issues
+      # 检查容器内的服务日志，确保服务启动成功
+      run: docker logs $(docker ps -q --filter ancestor=xream/script-hub:latest)
+
+    - name: Run Python script
+      run: |
+        python script.py
+
+    - name: Move generated files to Surge folder
+      run: |
+        mkdir -p Surge
+        mv *.sgmodule Surge/
+
+    - name: Upload generated files to repository
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add Surge/*.sgmodule
+
+        if git diff --cached --quiet; then
+          echo "没有需要提交的更改"
+        else
+          git commit -m "Add generated plugin files to Surge folder"
+          git push origin main
+        fi

@@ -1,0 +1,15 @@
+#!name=Follow每日签到
+#!desc=Follow每日签到，需要进入此插件的主页链接，阅读使用说明操作。
+#!author=gideonsenku[https://github.com/gideonsenku], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FollowRSS.png
+#!category=iKeLee
+#!openUrl=https://follow.is
+#!tag=签到
+#!loon_version=3.2.1(749)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/FollowRSS/README.md
+#!date=2024-10-17 22:58:30
+
+[Script]
+# 定时签到
+Follow每日签到 = type=cron, cronexp="null", script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/14585c877c96ee897fe89a9f2def211146f2132b246d0c4bfff94a27bf817250.js, timeout=120, argument="[{token},{cookie}]"
+
