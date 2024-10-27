@@ -10,7 +10,7 @@
 #!date=2024-07-25 00:39:16
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, tnc,extended-matching), (AND, ((OR, ((DOMAIN-KEYWORD, -bjlgy,extended-matching), (DOMAIN-KEYWORD, -alisc,extended-matching), (DOMAIN-KEYWORD, -aliec,extended-matching), (DOMAIN-KEYWORD, -alisg),extended-matching)), (OR, ((DOMAIN-SUFFIX, snssdk.com,extended-matching), (DOMAIN-SUFFIX, isnssdk.com,extended-matching), (DOMAIN-SUFFIX, toutiaoapi.com,extended-matching), (DOMAIN-SUFFIX, bytedance.com,extended-matching), (DOMAIN-SUFFIX, zijieapi.com)))),extended-matching)), REJECT,pre-matching
+AND, ((DOMAIN-KEYWORD, tnc,extended-matching), (AND, ((OR, ((DOMAIN-KEYWORD, -bjlgy,extended-matching), (DOMAIN-KEYWORD, -alisc,extended-matching), (DOMAIN-KEYWORD, -aliec,extended-matching), (DOMAIN-KEYWORD, -alisg,extended-matching))), (OR, ((DOMAIN-SUFFIX, snssdk.com,extended-matching), (DOMAIN-SUFFIX, isnssdk.com,extended-matching), (DOMAIN-SUFFIX, toutiaoapi.com,extended-matching), (DOMAIN-SUFFIX, bytedance.com,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)))))), REJECT,pre-matching
 AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
 AND, ((DOMAIN-KEYWORD, -ttam-,extended-matching), (DOMAIN-SUFFIX, ibyteimg.com,extended-matching)), REJECT,pre-matching
 AND, ((DOMAIN-KEYWORD, ssdk-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
