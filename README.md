@@ -1,4 +1,4 @@
-# Custom Network Controls
+# CustomNetworkControls
 鉴于上游仓库出现重大变化，本仓库对其中部分变化不敢苟同，故不再沿用上游仓库名称
 ------
 > [!CAUTION]
