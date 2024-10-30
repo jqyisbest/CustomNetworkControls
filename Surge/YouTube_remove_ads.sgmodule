@@ -11,8 +11,8 @@
 #!date=2024-06-11 21:59:22
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, googlevideo.com,extended-matching),  (PROTOCOL, QUIC)), REJECT
-AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com,extended-matching),  (PROTOCOL, QUIC)), REJECT
+AND,((DOMAIN-SUFFIX,googlevideo.com,extended-matching),(PROTOCOL,QUIC)),REJECT
+AND,((DOMAIN-SUFFIX,youtubei.googleapis.com,extended-matching),(PROTOCOL,QUIC)),REJECT
 
 [Map Local]
 # 使用reject-dict方法以减少开销

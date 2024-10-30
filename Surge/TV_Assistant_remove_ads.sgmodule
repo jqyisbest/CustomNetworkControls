@@ -10,10 +10,10 @@
 #!date=2024-07-11 02:43:39
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, normal,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, minigame,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, tnc,extended-matching), (AND, ((OR, ((DOMAIN-KEYWORD, -bjlgy,extended-matching), (DOMAIN-KEYWORD, -alisc,extended-matching), (DOMAIN-KEYWORD, -aliec,extended-matching))), (OR, ((DOMAIN-SUFFIX, snssdk.com,extended-matching), (DOMAIN-SUFFIX, toutiaoapi.com,extended-matching), (DOMAIN-SUFFIX, bytedance.com,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)))))), REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,minigame,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,tnc,extended-matching),(AND,((OR,((DOMAIN-KEYWORD,-bjlgy,extended-matching),(DOMAIN-KEYWORD,-alisc,extended-matching),(DOMAIN-KEYWORD,-aliec,extended-matching))),(OR,((DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)))))),REJECT,pre-matching
 DOMAIN,mon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,mssdk-bu.bytedance.com,REJECT,extended-matching,pre-matching
 DOMAIN,toblog.ctobsnssdk.com,REJECT,extended-matching,pre-matching

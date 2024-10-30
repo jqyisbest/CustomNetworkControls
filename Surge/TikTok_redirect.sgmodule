@@ -10,7 +10,7 @@
 #!date=2024-07-27 20:21:36
 
 [Rule]
-AND, ((GEOIP, CN), (DOMAIN, pitaya.bytedance.com,extended-matching)), DIRECT
+AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com,extended-matching)),DIRECT
 
 [URL Rewrite]
 # 去广告

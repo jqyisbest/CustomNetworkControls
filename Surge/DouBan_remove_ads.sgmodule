@@ -65,27 +65,27 @@ DOMAIN,aspect-upush.umeng.com,REJECT,extended-matching,pre-matching
 DOMAIN,plbslog.umeng.com,REJECT,extended-matching,pre-matching
 DOMAIN,log.umtrack.com,REJECT,extended-matching,pre-matching
 DOMAIN,aaid.umeng.com,REJECT,extended-matching,pre-matching
-AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, -ttam-,extended-matching), (DOMAIN-SUFFIX, ibyteimg.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ssdk-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, pangolin,extended-matching), (DOMAIN-SUFFIX, sgsnssdk.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -short.bytetos.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, v,extended-matching), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, s,extended-matching), (DOMAIN-KEYWORD, -fe-scm.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -ttcdn-tos.pstatp.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -fe-tos.pglstatp-toutiao.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, sf,extended-matching), (DOMAIN-KEYWORD, -static.i18n-pglstatp.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, if,extended-matching), (DOMAIN-KEYWORD, -cdn-tos.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, if,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, lf,extended-matching), (DOMAIN-KEYWORD, -analytics.bytescm.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, normal,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -access-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -log-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, -dual-event-,extended-matching), (DOMAIN-SUFFIX, pangle.io,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, api,extended-matching), (DOMAIN-KEYWORD, pangolin,extended-matching), (DOMAIN-SUFFIX, sgsnssdk.com,extended-matching)), REJECT,pre-matching
-AND, ((DOMAIN-KEYWORD, ads,extended-matching), (DOMAIN-KEYWORD, -normal-lq,extended-matching), (DOMAIN-SUFFIX, zijieapi.com,extended-matching)), REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,-ttam-,extended-matching),(DOMAIN-SUFFIX,ibyteimg.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ssdk-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,pangolin,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-short.bytetos.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,v,extended-matching),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,s,extended-matching),(DOMAIN-KEYWORD,-fe-scm.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-ttcdn-tos.pstatp.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-fe-tos.pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,sf,extended-matching),(DOMAIN-KEYWORD,-static.i18n-pglstatp.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,if,extended-matching),(DOMAIN-KEYWORD,-cdn-tos.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,if,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,lf,extended-matching),(DOMAIN-KEYWORD,-analytics.bytescm.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-access-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-log-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-dual-event-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,pangolin,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,-normal-lq,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
 URL-REGEX,^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/,REJECT,extended-matching
 DOMAIN,mon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,lf-ad-ies.bytecdn.cn,REJECT,extended-matching,pre-matching
