@@ -45,7 +45,7 @@ DOMAIN-SUFFIX,gdt.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
-URL-REGEX,^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/,REJECT,extended-matching
+URL-REGEX,"^http:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_k_main_page_banner\/",REJECT,extended-matching
 
 [Map Local]
 ^https:\/\/wallpaper-\d+\.file\.myqcloud\.com\/dsl\/ data-type=text data="{}" status-code=200

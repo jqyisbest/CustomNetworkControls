@@ -18,8 +18,8 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
 DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 IP-CIDR,39.97.130.51/32,REJECT,no-resolve,pre-matching
 IP-CIDR,39.97.128.148/32,REJECT,no-resolve,pre-matching
-URL-REGEX,^http:\/\/api\.weibo\.cn\/2\/httpdns\/config,REJECT,extended-matching
-URL-REGEX,^http:\/\/api\.weibo\.cn\/httpdns\/config,REJECT,extended-matching
+URL-REGEX,"^http:\/\/api\.weibo\.cn\/2\/httpdns\/config",REJECT,extended-matching
+URL-REGEX,"^http:\/\/api\.weibo\.cn\/httpdns\/config",REJECT,extended-matching
 
 [Map Local]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播

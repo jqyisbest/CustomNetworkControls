@@ -23,9 +23,9 @@ DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-KEYWORD,trace.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT,extended-matching,pre-matching
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
-URL-REGEX,^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+,REJECT,extended-matching
-URL-REGEX,^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+,REJECT,extended-matching
-URL-REGEX,^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+,REJECT,extended-matching
+URL-REGEX,"^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+",REJECT,extended-matching
+URL-REGEX,"^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+",REJECT,extended-matching
+URL-REGEX,"^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+",REJECT,extended-matching
 
 [Map Local]
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data-type=text data="{}" status-code=200

@@ -26,7 +26,7 @@ DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
 # DOMAIN, qzs.gdtimg.com, REJECT
 DOMAIN-SUFFIX,gdt.qq.com,REJECT,extended-matching,pre-matching
 # c2.gdt.qq.com, REJECT
-URL-REGEX,^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html,REJECT,extended-matching
+URL-REGEX,"^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html",REJECT,extended-matching
 
 [Map Local]
 # 广告配置

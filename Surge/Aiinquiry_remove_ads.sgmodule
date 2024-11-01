@@ -10,7 +10,7 @@
 #!date=2024-06-29 19:35:12
 
 [Rule]
-URL-REGEX,^http:\/\/180\.76\.76\.112\/v\d\/,REJECT,extended-matching
+URL-REGEX,"^http:\/\/180\.76\.76\.112\/v\d\/",REJECT,extended-matching
 
 [URL Rewrite]
 ^https:\/\/aiqicha\.baidu\.com\/app\/commonstatusAjax - reject

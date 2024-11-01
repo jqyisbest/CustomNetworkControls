@@ -6,7 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-10-04 03:37:48
+#!date=2024-11-01 15:51:57
 
 [Rule]
 AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
@@ -30,7 +30,7 @@ AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-log-,extended-match
 AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,-dual-event-,extended-matching),(DOMAIN-SUFFIX,pangle.io,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,api,extended-matching),(DOMAIN-KEYWORD,pangolin,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,-normal-lq,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
-URL-REGEX,^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/,REJECT,extended-matching
+URL-REGEX,"^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/",REJECT,extended-matching
 DOMAIN,mon.zijieapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,lf-ad-ies.bytecdn.cn,REJECT,extended-matching,pre-matching
 DOMAIN,i.snssdk.com,REJECT,extended-matching,pre-matching
@@ -148,6 +148,7 @@ DOMAIN,huatuocode.huatuo.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,info4.video.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,info6.video.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,ios.bugly.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,pro.bugly.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,ios.video.mpush.qq.com,REJECT,extended-matching,pre-matching
 # DOMAIN, mazu.m.qq.com, REJECT // 误杀
 DOMAIN,mi.gdt.qq.com,REJECT,extended-matching,pre-matching

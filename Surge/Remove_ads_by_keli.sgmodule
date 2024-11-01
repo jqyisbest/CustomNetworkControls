@@ -25,7 +25,7 @@ DOMAIN-SUFFIX,doubleclick.net,REJECT,extended-matching,pre-matching
 # 虎牙直播开屏广告
 DOMAIN,business.msstatic.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT,extended-matching,pre-matching
-URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$,REJECT,extended-matching
+URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$",REJECT,extended-matching
 # 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com,REJECT,extended-matching,pre-matching
 # 中国电信
@@ -36,8 +36,8 @@ DOMAIN,adshows.21cn.com,REJECT,extended-matching,pre-matching
 IP-CIDR,122.229.8.47/32,REJECT,no-resolve,pre-matching
 IP-CIDR,122.229.29.89/32,REJECT,no-resolve,pre-matching
 # 快递100
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF,extended-matching
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF,extended-matching
+URL-REGEX,"^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do",REJECT-TINYGIF,extended-matching
+URL-REGEX,"^http:\/\/p\.kuaidi100\.com\/advertisement\/",REJECT-TINYGIF,extended-matching
 # 亲邻开门
 DOMAIN,mall-dsp2.qinlinkeji.com,REJECT,extended-matching,pre-matching
 DOMAIN,mallapi2.qinlinkeji.com,REJECT,extended-matching,pre-matching
