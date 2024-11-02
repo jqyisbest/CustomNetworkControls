@@ -14,6 +14,10 @@
 force-http-engine-hosts = %APPEND% :8000
 
 [Rule]
+# 屏蔽B站垃圾CDN
+DOMAIN-SUFFIX,szbdyd.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,mcdn.bilivideo.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,mcdn.bilivideo.com,REJECT,extended-matching,pre-matching
 # 开屏广告
 URL-REGEX,"^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
 URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
@@ -25,6 +29,9 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF
 (^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) $1 302
 
 [Map Local]
+# 屏蔽奇奇怪怪的数据上报
+^https:\/\/api.bilibili.com\/x\/report data-type=text data="{}" status-code=200
+
 # 开屏广告
 ^https:\/\/(?:api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download) data-type=text data="{}" status-code=200
 
@@ -52,7 +59,7 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF
 ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? data-type=text data="{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }" status-code=200 header="Content-Type:text/json"
 
 [Script]
-body_rewrite_27 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
+body_rewrite_34 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
 
 # 移除播放页面视频列表广告
 移除播放页面视频列表广告 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/466ee52ebb28dc9e6417503ac07b75bd6219bec6388e4975d2f4afcea25da214.js, requires-body=true, binary-body-mode=true
