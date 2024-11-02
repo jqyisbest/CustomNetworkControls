@@ -19,6 +19,7 @@ DOMAIN-SUFFIX, szbdyd.com, REJECT
 DOMAIN-SUFFIX, mcdn.bilivideo.cn, REJECT
 DOMAIN-SUFFIX, mcdn.bilivideo.com, REJECT
 AND, ((URL-REGEX, ^http:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:(\d)+)?\/.*\.m4s),(USER-AGENT, Bilibili Freedoooooom/MarkII)), REJECT
+
 # 开屏广告
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT-DICT
 URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
@@ -26,6 +27,7 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 [Rewrite]
 # 屏蔽奇奇怪怪的数据上报
 ^https:\/\/api.bilibili.com\/x\/report reject-dict
+
 # 开屏广告
 ^https:\/\/(?:api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download) reject-dict
 
