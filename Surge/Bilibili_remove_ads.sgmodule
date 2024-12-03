@@ -17,10 +17,6 @@ DOMAIN-SUFFIX,szbdyd.com,REJECT,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
 URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
 
-[URL Rewrite]
-(^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) $1 307
-(^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) $1 307
-
 [Map Local]
 # 屏蔽奇奇怪怪的数据上报
 ^https:\/\/api.bilibili.com\/x\/report data-type=text data="{}" status-code=200
