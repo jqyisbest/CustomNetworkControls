@@ -1,0 +1,13 @@
+#!name=DNS解析分流
+#!desc=对国内域名指定国内DNS
+#!author=jqyisbest[https://github.com/jqyisbest]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Prevent_DNS_Leaks.png
+#!category=iKeLee
+#!openUrl=https://github.com/jqyisbest/CustomNetworkControls
+#!tag=分流
+#!system=ios
+#!system_version=15
+#!loon_version=3.2.1(777)
+#!homepage=https://github.com/jqyisbest/CustomNetworkControls
+#!date=2024-12-03 14:03:30.649673+08:00 Asia/Shanghai
+

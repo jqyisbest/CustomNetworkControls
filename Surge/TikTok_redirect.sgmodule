@@ -1,0 +1,24 @@
+#!name=TikTok解锁
+#!desc=移除TikTok视频水印并自定义解锁地区，需要配置此插件至对应地区的节点。
+#!author=Keywos[https://github.com/Keywos]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png
+#!category=iKeLee
+#!openUrl=https://apps.apple.com/app/id835599320
+#!tag=功能增强
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!date=2024-11-28 00:00:00
+
+[Rule]
+AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com,extended-matching)),DIRECT
+
+[URL Rewrite]
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ - reject
+^https:\/\/tnc\d+-platform-\w+\.tiktokv\.com\/get_domains\/ - reject
+
+[Script]
+TikTok解锁 = type=http-request, pattern=https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ef70db6df28eb2f029ce2a02c9ba58844dd0000d72d53560a6a941e56c2d7045.js
+
+[MITM]
+hostname = %APPEND% *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com
+
