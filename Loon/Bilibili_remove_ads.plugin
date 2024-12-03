@@ -34,8 +34,8 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-DICT
 ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/TFInfo$ url reject-dict
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject-dict
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp reject-dict
-(^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) 307 $1
-(^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 307 $1
+# (^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) 307 $1
+# (^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 307 $1
 
 [Script]
 # 处理B站垃圾CDN
