@@ -9,6 +9,8 @@
 #!date=2024-12-01 01:26:34
 
 [Rule]
+DOMAIN,paydns.wechatpay.cn,REJECT,extended-matching,pre-matching
+IP-CIDR,101.226.211.106/32,REJECT,no-resolve,pre-matching
 DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT,extended-matching,pre-matching
 DOMAIN,union-httpdns.gslb.yy.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns-v6.gslb.yy.com,REJECT,extended-matching,pre-matching
