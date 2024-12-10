@@ -4,9 +4,11 @@
 // 2024-11-24 18:15
 
 const url = $request.url;
+const response = $response;
 const header = $request.headers;
 const contype = header["content-type"];
 const headopt = header["operation-type"];
+if (response && response.body) {console.log("response对象如下：");console.log(response);}
 
 if (url.includes("/mobile.12306.cn/otsmobile/app/mgs/")) {
   // 12306页面内容
