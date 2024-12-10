@@ -10,7 +10,7 @@ const headopt = header["operation-type"];
 
 if (url.includes("/mobile.12306.cn/otsmobile/app/mgs/")) {
   // 12306页面内容
-  const list12306 = ["com.cars.otsmobile.queryInsuranceInfo",
+  const list12306 = [
     // "com.cars.otsmobile.bangbangSafe.deciveInfo", // 设备序列号
     // "com.cars.otsmobile.checkLoginStatus", // 登录信息
     // "com.cars.otsmobile.city",
@@ -53,4 +53,3 @@ if (url.includes("/mobile.12306.cn/otsmobile/app/mgs/")) {
 } else {
   $done({});
 }
-if ($response) {console.log("response.body对象如下：");console.log(JSON.parse($response.body));}
