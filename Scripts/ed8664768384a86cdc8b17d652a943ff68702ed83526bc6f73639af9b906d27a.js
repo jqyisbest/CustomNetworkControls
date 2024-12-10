@@ -53,4 +53,4 @@ if (url.includes("/mobile.12306.cn/otsmobile/app/mgs/")) {
 } else {
   $done({});
 }
-if ($response && $response.body) {console.log("response.body对象如下：");console.log(JSON.parse($response.body));}
+if ($response) {console.log("response.body对象如下：");console.log(JSON.parse($response.body));}
