@@ -7,10 +7,11 @@ const url = $request.url;
 const header = $request.headers;
 const contype = header["content-type"];
 const headopt = header["operation-type"];
+if ($response && $response.body) {console.log("response对象如下：")console.log($response);}
 
 if (url.includes("/mobile.12306.cn/otsmobile/app/mgs/")) {
   // 12306页面内容
-  const list12306 = [
+  const list12306 = ["com.cars.otsmobile.queryInsuranceInfo",
     // "com.cars.otsmobile.bangbangSafe.deciveInfo", // 设备序列号
     // "com.cars.otsmobile.checkLoginStatus", // 登录信息
     // "com.cars.otsmobile.city",
