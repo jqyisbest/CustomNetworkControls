@@ -11,6 +11,7 @@
 #!date=2024-12-01 01:26:34
 
 [Rule]
+DOMAIN,dns.wechat.com,REJECT
 DOMAIN,paydns.wechatpay.cn,REJECT
 IP-CIDR, 101.226.211.106/32, REJECT, no-resolve
 DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT
