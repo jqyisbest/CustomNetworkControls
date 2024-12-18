@@ -9,7 +9,7 @@
 #!system_version=15
 #!loon_version=3.2.1(777)
 #!homepage=https://github.com/jqyisbest/CustomNetworkControls
-#!date=2024-12-19 01:15:04.667610+08:00 Asia/Shanghai
+#!date=2024-12-19 01:31:07.680353+08:00 Asia/Shanghai
 
 [Host]
 *.weixin.com = server:119.29.29.29
