@@ -48,7 +48,6 @@ DOMAIN-SUFFIX,wx.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,wxs.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT,extended-matching
-USER-AGENT,"MicroMessenger*",DIRECT
 
 [URL Rewrite]
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
@@ -327,6 +326,38 @@ http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tacti
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= data-type=text data="{}" status-code=200
 
 ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe data-type=text data="{}" status-code=200
+
+[Host]
+# refer: https://www.dnspod.cn/products/publicdns
+*.tencent.com = server:119.29.29.29
+# QQ
+*.qq.com = server:119.29.29.29
+# 腾讯头像
+*.qlogo.cn = server:119.29.29.29
+# 腾讯图片
+*.qpic.cn = server:119.29.29.29
+# 微信
+*.weixin.qq.com = server:119.29.29.29
+*.wx.qq.com = server:119.29.29.29
+*.weixin.com = server:119.29.29.29
+# 微信公众平台
+*.weixinbridge.com = server:119.29.29.29
+# WeChat
+*.wechat.com = server:119.29.29.29
+# 微信小程序
+*.servicewechat.com = server:119.29.29.29
+# 微云
+*.weiyun.com = server:119.29.29.29
+# 腾讯 图片 静态资源
+*.gtimg.cn = server:119.29.29.29
+*.idqqimg.com = server:119.29.29.29
+# 腾讯 静态资源 CDN
+*.cdn-go.cn = server:119.29.29.29
+# 腾讯云 智能云解析DNS
+*.smtcdns.com = server:119.29.29.29
+*.smtcdns.net = server:119.29.29.29
+# 腾讯短网址
+url.cn = server:119.29.29.29
 
 [Script]
 # 外部链接解锁
