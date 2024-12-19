@@ -48,6 +48,7 @@ DOMAIN-SUFFIX,wx.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,wxs.qq.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT,extended-matching
+AND,((GEOIP,CN),(USER-AGENT,"MicroMessenger*")),DIRECT
 
 [URL Rewrite]
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
