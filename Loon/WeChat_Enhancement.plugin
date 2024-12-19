@@ -8,35 +8,35 @@
 [host]
 # > 腾讯
 # refer: https://www.dnspod.cn/products/publicdns
-*.tencent.com = server:https://doh.pub/dns-query
+*.tencent.com = server:119.29.29.29
 # QQ
-*.qq.com = server:https://doh.pub/dns-query
+*.qq.com = server:119.29.29.29
 # 腾讯头像
-*.qlogo.cn = server:https://doh.pub/dns-query
+*.qlogo.cn = server:119.29.29.29
 # 腾讯图片
-*.qpic.cn = server:https://doh.pub/dns-query
+*.qpic.cn = server:119.29.29.29
 # 微信
-*.weixin.qq.com = server:https://doh.pub/dns-query
-*.wx.qq.com = server:https://doh.pub/dns-query
-*.weixin.com = server:https://doh.pub/dns-query
+*.weixin.qq.com = server:119.29.29.29
+*.wx.qq.com = server:119.29.29.29
+*.weixin.com = server:119.29.29.29
 # 微信公众平台
-*.weixinbridge.com = server:https://doh.pub/dns-query
+*.weixinbridge.com = server:119.29.29.29
 # WeChat
-*.wechat.com = server:https://doh.pub/dns-query
+*.wechat.com = server:119.29.29.29
 # 微信小程序
-*.servicewechat.com = server:https://doh.pub/dns-query
+*.servicewechat.com = server:119.29.29.29
 # 微云
-*.weiyun.com = server:https://doh.pub/dns-query
+*.weiyun.com = server:119.29.29.29
 # 腾讯 图片 静态资源
-*.gtimg.cn = server:https://doh.pub/dns-query
-*.idqqimg.com = server:https://doh.pub/dns-query
+*.gtimg.cn = server:119.29.29.29
+*.idqqimg.com = server:119.29.29.29
 # 腾讯 静态资源 CDN
-*.cdn-go.cn = server:https://doh.pub/dns-query
+*.cdn-go.cn = server:119.29.29.29
 # 腾讯云 智能云解析DNS
-*.smtcdns.com = server:https://doh.pub/dns-query
-*.smtcdns.net = server:https://doh.pub/dns-query
+*.smtcdns.com = server:119.29.29.29
+*.smtcdns.net = server:119.29.29.29
 # 腾讯短网址
-url.cn = server:https://doh.pub/dns-query
+url.cn = server:119.29.29.29
 
 
 [Rule]
@@ -86,10 +86,7 @@ DOMAIN-SUFFIX,wx.qq.com,DIRECT
 DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
 DOMAIN-SUFFIX,wxs.qq.com,DIRECT
 DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT
-USER-AGENT,MicroMessenger*,DIRECT
-USER-AGENT,WeChat*,PROXY
-IP-ASN,132203,PROXY,no-resolve
-
+AND,((GEOIP,CN),(USER-AGENT,MicroMessenger*)),DIRECTAND,((USER-AGENT,WeChat*),(NOT,((GEOIP,CN)))),PROXYAND,((IP-ASN,132203,no-resolve),(NOT,((GEOIP,CN)))),PROXY
 [Rewrite]
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
 # 交通银行小程序开屏广告 @张军
