@@ -7,7 +7,7 @@
 #!tag=去广告
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-11-28 00:00:00
+#!date=2024-12-24 01:16:46
 
 [Script]
 JSON处理 = type=http-request, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ab3729c11d6de663a6f98d5a77d92213a5b1c101536ee65c2e4f33442fea3faf.js, timeout=10
