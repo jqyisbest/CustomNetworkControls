@@ -12,10 +12,8 @@
 
 
 [Script]
-# http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/bcf28679ff47ec2f7b37646d1b370f244d4bb18479db7193e13adc369191f30e.js,requires-body=true,tag=京东比价
-http-response ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cde55f2a5df278c03da65c33b0147a316c6db475661a0d6339d4776d6edbe375.js,requires-body=true,tag=京东比价
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4149551bfa691f2d7ba30ab713fde33475402168b5d1c11de4724bf0a4e9e369.js,requires-body=true,tag=京东比价
 
 
 [MitM]
-# hostname=in.m.jd.com
-hostname=api.m.jd.com
+hostname=in.m.jd.com
