@@ -11,16 +11,13 @@
 #!select=镜像源,A镜像,B镜像
 #!date=2024-11-28 00:00:00
 
-
 [Rule]
 DOMAIN,fastraw.ixnic.net,DIRECT
 DOMAIN,hub.incept.pw,DIRECT
 DOMAIN,raw.kkgithub.com,DIRECT
 
-
 [Script]
 http-request ^https:\/\/raw\.githubusercontent\.com\/ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f2509e873ce992980c36c0f34024b18e7fd900764ed2a71db5e64b5a3ea1c801.js,tag=GitHub加速
-
 
 [MitM]
 hostname=raw.githubusercontent.com

@@ -10,7 +10,6 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
 #!date=2024-12-02 15:25:28
 
-
 [Script]
 generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ba775f2c3ab62a7bf41ec581837b43393047e0eb7d62d541cb5bfa8079e11959.js,timeout=10,tag=入口落地查询,img-url=globe.asia.australia.system
 generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/74ea26399b0e00d397391ca7bab4743c45b0db9d09f844826e44b4aa61f71ea5.js,timeout=10,tag=地理位置查询,img-url=location.circle.system
