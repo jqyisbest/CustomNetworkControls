@@ -9,7 +9,7 @@
 #!system_version=15
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-02-28 20:00:19
+#!date=2025-03-06 23:23:20
 
 [Rule]
 # 屏蔽B站垃圾CDN
@@ -101,7 +101,7 @@ body_rewrite_48 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/
 
 移除搜索结果广告 = type=http-response, pattern=^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3a7488ae3b672aaf43f62b64eb252f02dfd2cb0b895550b4ef7b8e499b2017ef.js, requires-body=true, binary-body-mode=true
 
-# 移除开屏广告
+# 上部为Proto处理，下部为JSON配置处理
 移除观影页广告 = type=http-response, pattern=^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js, requires-body=true
 
 移除开屏广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js, requires-body=true
