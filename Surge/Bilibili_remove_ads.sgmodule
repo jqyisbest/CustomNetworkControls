@@ -9,7 +9,7 @@
 #!system_version=15
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-03-06 23:23:20
+#!date=2025-03-08 00:01:52
 
 [Rule]
 # 屏蔽B站垃圾CDN
@@ -109,8 +109,6 @@ body_rewrite_48 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/
 精简首页顶部标签 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js, requires-body=true
 
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js, requires-body=true
-
-移除首页推荐广告 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% *.bilivideo.cn, *.bilivideo.com, *live.bilibili.com, ap?.bilibili.com, grpc.biliapi.net, m.bilibili.com, manga.bilibili.com, www.bilibili.com
