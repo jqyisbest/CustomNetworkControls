@@ -8,7 +8,7 @@
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
-#!date=2025-03-06 23:23:20
+#!date=2025-03-08 00:01:52
 
 [Argument]
 showUpList=select,"auto","true","false",tag=[动态]中[最常访问]的显示方式,desc=auto：仅当列表中存在直播状态时显示；true：始终显示；false：始终隐藏。
@@ -87,6 +87,11 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-DICT
 # ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 # ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 
+# 移除首页推荐广告
+^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index response-body-json-jq 'if .data.items then .data.items |= map(select((has("banner_item") | not) and (has("ad_info") | not) and (.card_goto == "av") and (.card_type | IN("small_cover_v2", "large_cover_single_v9", "large_cover_v1")))) end'
+# 移除竖屏广告
+^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\? response-body-json-jq 'if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | startswith("ad") | not)) | del(.story_cart_icon))'
+
 [Script]
 # 处理B站垃圾CDN
 http-request ^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js, tag = 处理B站域名型垃圾CDN
@@ -111,7 +116,9 @@ http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) 
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js,requires-body=true,tag=移除开屏广告
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js,requires-body=true,tag=精简首页顶部标签
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js,requires-body=true,tag=精简我的页面
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js,requires-body=true,tag=移除首页推荐广告
+
+# 已被JQ替代
+# http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f9058a634a6185691116a4287bc3cad0d718dd30a14c359d6aaba890ce0102b6.js,requires-body=true,tag=移除首页推荐广告
 
 [MitM]
 hostname = *.bilivideo.cn,*.bilivideo.com,*live.bilibili.com, ap?.bilibili.com, grpc.biliapi.net, m.bilibili.com, manga.bilibili.com, www.bilibili.com
