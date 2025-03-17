@@ -16,5 +16,4 @@ cookie=input,"",tag=Cookie,desc=这里需要输入Cookie的值
 cron=input,"0 1 * * *",tag=定时参数,desc=这里需要输入符合CRON表达式的参数
 
 [Script]
-# 定时签到
 cron {cron} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/14585c877c96ee897fe89a9f2def211146f2132b246d0c4bfff94a27bf817250.js,tag=Follow每日签到,timeout=120,argument=[{token},{cookie}]
