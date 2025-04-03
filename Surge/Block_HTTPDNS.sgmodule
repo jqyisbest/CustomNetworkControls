@@ -6,7 +6,7 @@
 #!tag=DNS
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-03-17 23:36:29
+#!date=2025-04-02 21:18:09
 
 [Rule]
 DOMAIN,dns.wechat.com,REJECT,extended-matching,pre-matching
@@ -19,7 +19,7 @@ URL-REGEX,"^http:\/\/103\.44\.58\.64\/md\?",REJECT,extended-matching
 URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns",REJECT,extended-matching
 DOMAIN,dns2.q2cdn.com,REJECT,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/",REJECT,extended-matching
-IP-CIDR,8.134.241.67/32,REJECT,pre-matching
+IP-CIDR,8.134.241.67/32,REJECT,no-resolve,pre-matching
 DOMAIN,httpdns.volcengineapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,dig.bdurl.net,REJECT,extended-matching,pre-matching
 DOMAIN,dig.zjurl.cn,REJECT,extended-matching,pre-matching
