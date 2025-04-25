@@ -8,10 +8,11 @@
 #!loon_version=3.2.9(837)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
-#!date=2025-03-28 00:08:44
+#!date=2025-04-25 23:12:32
 
 [Argument]
 showUpList=select,"auto","true","false",tag=[动态]中[最常访问]的显示方式,desc=auto：仅当列表中存在直播状态时显示；true：始终显示；false：始终隐藏。
+filterTopReplies=switch,"true","false",tag=移除评论区置顶广告,desc=移除评论区置顶广告
 
 [Rule]
 # 屏蔽B站垃圾CDN
@@ -46,6 +47,8 @@ URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-DICT
 
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\? response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | if .card_list then .card_list |= map(select(.card_type != "banner_v2")) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
 
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject-dict
+
 ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? response-body-json-del data.common_equip
 
 ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine(?:\/ipad)?\? response-body-json-jq jq-path="https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/b7e3dc5217d4737dd1048469b82d28fa5e5fbede0153e6d45aa8b06e9c3ebd5d.jq"
@@ -58,7 +61,7 @@ http-request ^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/
 http-request ^https?:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js, tag = 处理B站IP型垃圾CDN
 # 处理B站链接跟踪参数
 http-request (?:^https:\/\/live\.bilibili\.com\/[0-9]+|^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV[A-Za-z0-9_]{10}|av[0-9]{9}))\/?\?.* script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/cbf351b78279e46b331c0285d0457c5aa9741dbd9e65eccddc63cdc926c039d2.js, tag = 处理B站链接跟踪参数
-http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3a7488ae3b672aaf43f62b64eb252f02dfd2cb0b895550b4ef7b8e499b2017ef.js,requires-body=true,binary-body-mode=true,tag=Proto处理,argument=[{showUpList}]
+http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3a7488ae3b672aaf43f62b64eb252f02dfd2cb0b895550b4ef7b8e499b2017ef.js,requires-body=true,binary-body-mode=true,argument=[{showUpList}, {filterTopReplies}],tag=Proto处理
 
 [MitM]
 hostname = *.bilivideo.cn,*.bilivideo.com,grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com
