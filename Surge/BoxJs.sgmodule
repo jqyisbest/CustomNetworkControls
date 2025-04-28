@@ -10,7 +10,7 @@
 #!date=2024-11-28 00:00:00
 
 [Script]
-BoxJS = type=http-request, pattern=^https?:\/\/(.+\.)?boxjs\.(com|net), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7055226f4f1d8737245b28b7d05289f1b42880a418825ead3fe101b538e87409.js, requires-body=true, timeout=120
+BoxJS = type=http-request, pattern=^https?:\/\/(.+\.)?boxjs\.(com|net), script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 [MITM]
 hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
