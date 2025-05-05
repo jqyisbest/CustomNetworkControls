@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
-#!date = 2025-05-04 18:22:02
+#!date = 2025-05-05 01:30:13
 
 [Argument]
 showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto：仅当列表中存在直播状态时显示；true：始终显示；false：始终隐藏。
@@ -63,9 +63,9 @@ http-request ^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/
 http-request ^https?:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js, tag = 处理B站IP型垃圾CDN
 # 处理B站链接跟踪参数
 http-request (?:^https:\/\/live\.bilibili\.com\/[0-9]+|^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV[A-Za-z0-9_]{10}|av[0-9]{9}))\/?\?.* script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/cbf351b78279e46b331c0285d0457c5aa9741dbd9e65eccddc63cdc926c039d2.js, tag = 处理B站链接跟踪参数
-http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8a75454113f431664bf3f30bde8c108fea9c9b577ed618d7a7bb069ab6b507b5.js,  requires-body = true, binary-body-mode = true, enable = {enableAirborne}, tag = 空降助手自动版
+http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8a75454113f431664bf3f30bde8c108fea9c9b577ed618d7a7bb069ab6b507b5.js, requires-body = true, binary-body-mode = true, enable = {enableAirborne}, tag = 空降助手自动版
 
-http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8a75454113f431664bf3f30bde8c108fea9c9b577ed618d7a7bb069ab6b507b5.js,  requires-body = true, binary-body-mode = true, enable = {enableAirborneDm}, tag = 空降助手弹幕版
+http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8a75454113f431664bf3f30bde8c108fea9c9b577ed618d7a7bb069ab6b507b5.js, requires-body = true, binary-body-mode = true, enable = {enableAirborneDm}, tag = 空降助手弹幕版
 
 http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3a7488ae3b672aaf43f62b64eb252f02dfd2cb0b895550b4ef7b8e499b2017ef.js, requires-body = true, binary-body-mode = true, argument = [{showUpList}, {filterTopReplies}], tag = Proto处理
 
