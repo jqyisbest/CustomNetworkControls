@@ -10,19 +10,19 @@
 #!date=2024-11-28 00:00:00
 
 [Map Local]
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mall\.meituan\.com\/api\/c\/jigsaw\/code\/category-banner-\d+\/ data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/jigsaw\/code\/category-banner-\d+\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/order\/recommend\/v\d data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/order\/recommend\/v\d data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mall\.meituan\.com\/api\/c\/banner\/ data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/banner\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/personal\/recommend data-type=text data="{}" status-code=200
+^https:\/\/mall\.meituan\.com\/api\/c\/poi\/\d+\/personal\/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/businessapi\.ksedt\.com\/signupindex\/jxlist data-type=text data="{}" status-code=200
+^https:\/\/businessapi\.ksedt\.com\/signupindex\/jxlist data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 移除下发广告 = type=http-response, pattern=^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/24ef930663658e98eb4781d9d7c5e6de92e13b00916b45c4148483f34c357737.js, requires-body=true

@@ -113,17 +113,17 @@ DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
 ^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
 
 [Map Local]
-^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/startInfo$ data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/startInfo$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/indexBanner$ data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/indexBanner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/getPopup data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/getPopup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/allPopUpConfig$ data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/allPopUpConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/advConf$ data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/advConf$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.chenlongtech\.cn\/v\d\/user\/checkQTSheInsurance$ data-type=text data="{}" status-code=200
+^https:\/\/api\.chenlongtech\.cn\/v\d\/user\/checkQTSheInsurance$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 移除匹配卡横幅 = type=http-response, pattern=^https:\/\/api\.chenlongtech\.cn\/v\d\/lover\/productList, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/374e343c6e9576eaffb3a8ece4a67e8668c8e8bbb6cd7bd1e937becc7387c1f9.js, requires-body=true

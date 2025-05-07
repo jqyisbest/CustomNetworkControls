@@ -17,11 +17,11 @@ DOMAIN,180.76.76.200,REJECT,extended-matching,pre-matching
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve,pre-matching
 
 [Map Local]
-^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover data-type=text data="{}" status-code=200
+^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide data-type=text data="{}" status-code=200
+^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList data-type=text data="{}" status-code=200
+^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 清理首页 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/livefeed\/feed, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9821b7e17398200f10bc1441f4280104006709b897fa99227c8000f3e4c52578.js, requires-body=true

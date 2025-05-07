@@ -27,7 +27,7 @@ DOMAIN,log-verify.mob.com,REJECT,extended-matching,pre-matching
 DOMAIN,sdk.push.mob.com,REJECT,extended-matching,pre-matching
 
 [Map Local]
-^https:\/\/mapi\.mafengwo\.cn\/user\/growth\/get_growth_tip\/v1\? data-type=text data="{}" status-code=200
+^https:\/\/mapi\.mafengwo\.cn\/user\/growth\/get_growth_tip\/v1\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% mapi.mafengwo.cn

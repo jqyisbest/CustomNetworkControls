@@ -16,11 +16,11 @@ DOMAIN,render-web.11222.cn,REJECT,extended-matching,pre-matching
 ^https:\/\/ocean\.shuqireader\.com\/api\/render\/load\/resource - reject
 
 [Map Local]
-^https:\/\/huichuan\.sm\.cn\/nativead data-type=text data="{}" status-code=200
+^https:\/\/huichuan\.sm\.cn\/nativead data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/adV2 data-type=text data="{}" status-code=200
+^https:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/adV2 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/ocean\.shuqireader\.com\/api\/route\/ios\/readPage$ data-type=text data="{}" status-code=200
+^https:\/\/ocean\.shuqireader\.com\/api\/route\/ios\/readPage$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 移除书城横幅和阅读广告 = type=http-response, pattern=^https:\/\/ocean\.shuqireader\.com\/sqios\/render\/render\/page\/bookstore$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6a273714d6a8d1608222daa99c2fdd189642db5276cc8301aebc6089100d88a9.js, requires-body=true

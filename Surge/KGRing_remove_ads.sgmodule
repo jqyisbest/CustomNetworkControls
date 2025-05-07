@@ -109,7 +109,7 @@ DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adukwai.com,REJECT,extended-matching,pre-matching
 
 [Map Local]
-^http:\/\/api\.ring\.kugou\.com\/user\/notice\/recommend$ data-type=text data="{}" status-code=200
+^http:\/\/api\.ring\.kugou\.com\/user\/notice\/recommend$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% api.ring.kugou.com

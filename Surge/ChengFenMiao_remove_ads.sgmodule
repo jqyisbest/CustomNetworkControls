@@ -38,7 +38,7 @@ DOMAIN-SUFFIX,union.baidu.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,union.baidu.com,REJECT,extended-matching,pre-matching
 
 [Map Local]
-^https:\/\/app\.chengfenmiao\.com\/item\/closet\? data-type=text data="{}" status-code=200
+^https:\/\/app\.chengfenmiao\.com\/item\/closet\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% app.chengfenmiao.com
