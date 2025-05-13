@@ -1,6 +1,13 @@
 .data.tab = [
     {
         pos: 1,
+        id: 731,
+        name: "直播",
+        tab_id: "直播tab",
+        uri: "bilibili://live/home"
+    },
+    {
+        pos: 2,
         id: 477,
         name: "推荐",
         tab_id: "推荐tab",
@@ -8,32 +15,11 @@
         default_selected: 1
     },
     {
-        pos: 2,
+        pos: 3,
         id: 478,
         name: "热门",
         tab_id: "热门tab",
         uri: "bilibili://pegasus/hottopic"
-    },
-    {
-        pos: 3,
-        id: 545,
-        name: "动画",
-        tab_id: "bangumi",
-        uri: "bilibili://pgc/home"
-    },
-    {
-        pos: 4,
-        id: 151,
-        name: "影视",
-        tab_id: "film",
-        uri: "bilibili://pgc/cinema-tab"
-    },
-    {
-        pos: 5,
-        id: 731,
-        name: "直播",
-        tab_id: "直播tab",
-        uri: "bilibili://live/home"
     }
 ] | 
 .data.top = [
