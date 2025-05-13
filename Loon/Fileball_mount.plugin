@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Fileball/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Fileball.png
-#!date = 2024-11-28 00:00:00
+#!date = 2025-05-13 15:17:08
 
 [Script]
 http-request ^http:\/\/(aliyun|quark|pikpak)\.example\.com script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/fb3f4635c2b0e0a5542a6bb84f9dad41e1eeacb5f4da2bb198e570f3ee0df292.js, requires-body = true, tag = 三合一网盘挂载
