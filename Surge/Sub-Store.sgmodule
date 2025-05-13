@@ -7,7 +7,7 @@
 #!tag=订阅管理
 #!loon_version=3.2.1(749)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2024-11-28 00:00:00
+#!date=2025-05-13 15:17:08
 
 [Script]
 Sub-Store Core = type=http-request, pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4cde3782ccc842ef7ea1a0fda51433228bf213b88165c75d34fb01755ef06165.js, requires-body=true, timeout=120
