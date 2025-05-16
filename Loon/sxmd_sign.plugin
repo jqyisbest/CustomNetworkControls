@@ -15,4 +15,4 @@ CRONEXP = input, "0 0 * * *", tag = 定时参数, desc = 这里需要输入符�
 
 [Script]
 # 定时签到
-cron {CRONEXP} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/61a065cded101c84c16e039b2c0401fb2710fac2127f7e12e7f2276c1a8cc49a.js, tag = 书香门第每日签到, timeout = 120, argument=[{account},{password}]
+cron {CRONEXP} script-path = https://raw.githubusercontent.com/bgvioletsky/ios_rule/refs/heads/main/Loon/Script/sxmd.js, tag = 书香门第每日签到, timeout = 120, argument=[{account},{password}]
