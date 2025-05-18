@@ -23,7 +23,7 @@ http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-
 
 http-request ^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/618342e21e814b712b18528990ca2ec91d722d101876dd88c86430471fd52607.js, timeout = 120, tag = Rule转换
 
-http-request ^https?:\/\/script\.hub\/convert\/ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/16fd3c262aff1dcc505ba01a6850854286d0ef53480542ddf971041aa5a45ee9.js, timeout = 120, tag = JavaScript转换
+http-request ^https?:\/\/script\.hub\/convert\/ script-path = https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.beta.js, timeout = 120, tag = JavaScript转换
 
 [MitM]
 hostname = script.hub, *.script.hub
