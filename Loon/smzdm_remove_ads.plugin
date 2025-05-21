@@ -1,14 +1,14 @@
-#!name = 什么值得买去广告
-#!desc = 移除开屏广告、信息流广告、各类横幅广告、搜索页广告，精简我的页面。
-#!openUrl = https://apps.apple.com/app/id518213356
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag = 去广告
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.4(787)
-#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/smzdm.png
-#!date = 2025-05-17 13:41:25
+#!name=什么值得买去广告
+#!desc=移除开屏广告、信息流广告、各类横幅广告、搜索页广告，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id518213356
+#!author=jqyisbest[https://github.com/jqyisbest],可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/smzdm.png
+#!date=2025-05-21 14:54:15
 
 [Rule]
 DOMAIN,analytics-api-01.smzdm.com,REJECT
@@ -35,6 +35,8 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 
 ^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\? response-body-json-del data.super_coupon
 
+^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul\? response-body-json-del data.banner
+
 ^https:\/\/user-api\.smzdm\.com\/vip$ response-body-json-del data.big_banner
 
 ^https:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list\? reject-dict
@@ -48,4 +50,4 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 ^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\? response-body-json-jq '.data.search_hot.home |= map(select(.article_tag.article_title != "广告"))'
 
 [MitM]
-hostname = s-api.smzdm.com, app-api.smzdm.com, homepage-api.smzdm.com, h5.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, s-api.smzdm.com
+hostname = s-api.smzdm.com,app-api.smzdm.com, homepage-api.smzdm.com, h5.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, s-api.smzdm.com

@@ -1,16 +1,16 @@
-#!name = 节点检测工具
-#!desc = 适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
-#!openUrl = 
-#!author = xream[https://github.com/xream], Keywos[https://github.com/Keywos], KOP-XIAO[https://github.com/KOP-XIAO]
-#!tag = 节点检测
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.4(787)
-#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
-#!date = 2025-05-13 15:17:08
+#!name=节点检测工具
+#!desc=适用于Loon的节点检测工具，可进行地理位置、节点解锁、入口落地等查询。请在所有节点页面选择一个节点长按，出现菜单后进行测试。
+#!openUrl=
+#!author=xream[https://github.com/xream], Keywos[https://github.com/Keywos], KOP-XIAO[https://github.com/KOP-XIAO]
+#!tag=节点检测
+#!system=
+#!system_version=
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
+#!date=2025-05-13 15:17:08
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ba775f2c3ab62a7bf41ec581837b43393047e0eb7d62d541cb5bfa8079e11959.js, timeout = 10, tag = 入口落地查询,img-url=globe.asia.australia.system
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/74ea26399b0e00d397391ca7bab4743c45b0db9d09f844826e44b4aa61f71ea5.js, timeout = 10, tag = 地理位置查询,img-url=location.circle.system
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a4dc72f40ab2acc8bd3b578ded3fae7c9596429140e5a254ff9d01324bfb7f0b.js, timeout = 20, tag = 节点解锁查询,img-url=play.circle.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ba775f2c3ab62a7bf41ec581837b43393047e0eb7d62d541cb5bfa8079e11959.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/74ea26399b0e00d397391ca7bab4743c45b0db9d09f844826e44b4aa61f71ea5.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a4dc72f40ab2acc8bd3b578ded3fae7c9596429140e5a254ff9d01324bfb7f0b.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system
