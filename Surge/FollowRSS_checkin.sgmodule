@@ -10,6 +10,7 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
+# 定时签到
 Follow每日签到 = type=cron, cronexp={cron}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/14585c877c96ee897fe89a9f2def211146f2132b246d0c4bfff94a27bf817250.js, timeout=120, argument="[{token},{cookie}]"
 
 [MITM]

@@ -10,9 +10,11 @@
 #!date=2025-05-13 15:17:08
 
 [Rule]
+# 放行规则
 DOMAIN-SUFFIX,ad.12306.cn,REJECT,extended-matching,pre-matching
 
 [Script]
+# 移除12306应用内广告
 移除12306应用内广告 = type=http-request, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ed8664768384a86cdc8b17d652a943ff68702ed83526bc6f73639af9b906d27a.js
 
 [MITM]

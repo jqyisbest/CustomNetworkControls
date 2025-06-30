@@ -10,8 +10,10 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
+# 捕获Cookie
 捕获Cookie = type=http-request, pattern=^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6b5af72efd4857eee17f2bd2fe3ea96f9a7473839ea3f9cd84fc66ed98e3407d.js, requires-body=true
 
+# 定时签到
 WPS每日签到 = type=cron, cronexp={CRONEXP}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6b5af72efd4857eee17f2bd2fe3ea96f9a7473839ea3f9cd84fc66ed98e3407d.js, timeout=120, argument="[{AK},{SK},{MAX_RETRIES}]"
 
 [MITM]
