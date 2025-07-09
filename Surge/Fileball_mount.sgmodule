@@ -10,7 +10,6 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
-# 阿里云盘、夸克网盘和PikPak网盘挂载
 三合一网盘挂载 = type=http-request, pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/fb3f4635c2b0e0a5542a6bb84f9dad41e1eeacb5f4da2bb198e570f3ee0df292.js, requires-body=true
 
 [MITM]

@@ -10,11 +10,9 @@
 #!date=2025-05-13 15:17:08
 
 [Map Local]
-# 首页 - 横幅推广
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-# 精简我的页面
 精简我的页面 = type=http-response, pattern=^https:\/\/conf-m-ssl\.xunlei\.com\/external\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/483eda75c3d448d0773c88efe48864d79f5b0f70f15f3751c6f47abdd6a2c5b7.js, requires-body=true
 
 [MITM]

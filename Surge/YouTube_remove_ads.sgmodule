@@ -18,7 +18,6 @@ AND,((DOMAIN-SUFFIX,youtubei.googleapis.com,extended-matching),(PROTOCOL,QUIC)),
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data=" " status-code=200
 
 [Script]
-# YouTube去广告
 YouTube去广告 = type=http-response, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/0e6d1a1d9160588b52d9239eb6704cff40e492f78aba33e335c5510020349da7.js, requires-body=true, binary-body-mode=true, argument="[{blockUpload},{blockShorts},{blockImmersive},{captionLang},{lyricLang},{debug}]"
 
 [MITM]

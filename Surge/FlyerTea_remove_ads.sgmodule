@@ -10,24 +10,18 @@
 #!date=2025-05-13 15:17:08
 
 [URL Rewrite]
-# 全局广告配置
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=advis - reject
 
 [Map Local]
-# 我的页面 - 弹窗
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=vip_coupon data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 我的页面 - 悬浮窗
 ^https:\/\/ptf\.flyertrip\.com\/static\/img\/common\/ic_plate_mine_button\.png data-type=tiny-gif status-code=200
 
-# 发帖 - 横幅广告
 ^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-# 板块广告
 移除板块广告 = type=http-response, pattern=^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?version=5, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4a5cc67964306a7cbb8a42abb0b2916a406777c419ca3eb0bfe1a2d46a71353c.js, requires-body=true
 
-# 签到弹窗广告
 移除签到弹窗广告 = type=http-response, pattern=^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=plugin&id=k_misign:sign, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4a5cc67964306a7cbb8a42abb0b2916a406777c419ca3eb0bfe1a2d46a71353c.js, requires-body=true
 
 [MITM]
