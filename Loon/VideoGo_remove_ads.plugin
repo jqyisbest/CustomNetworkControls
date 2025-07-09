@@ -13,16 +13,12 @@
 [Rewrite]
 ^https:\/\/api\.ys7\.com\/api\/ads reject
 ^https:\/\/i\.ys7\.com\/api\/user\/tabList reject-dict
-# 我的页面 - 轮播图推广
 ^https:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/bannerInfo reject-dict
-# 智能 - 玩法 - 精选专题
 ^https:\/\/api\.ys7\.com\/v3\/intelligent-app\/apps\/linkage reject-dict
 ^https:\/\/api\.ys7\.com\/v3\/configurations\/gray\/info\?grayTypes=185 reject-dict
-# 天气视频
 ^https:\/\/api\.ys7\.com\/v3\/videoclips\/square\/video\/query reject-dict
 
 [Script]
-# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/fa33ce010a9e1ebd7d8607e0c3cdbaa2b32d2b609af65a4a0363f258b8b9d7cf.js, requires-body=true, tag=我的页面去广告
 
 [MitM]
 hostname=api.ys7.com, i.ys7.com

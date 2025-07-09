@@ -17,7 +17,6 @@ ShowOnly=switch, "true", "false", tag=仅显示“自动翻译”字幕, desc=�
 Position=select, "Forward", "Reverse", tag=原文字幕位置, desc=原文字幕的显示位置
 
 [Script]
-# YouTube字幕翻译
 http-request ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dddad78d631d657adce46ae960d7ef3b5e933804ffda367f9acd3705c928a0d5.js, requires-body=true, tag=JSON·YouTube播放器请求, argument=[{Type},{AutoCC},{ShowOnly},{Position}]
 http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7afb05c7b89fb521861796ab08000e780dcb351c72ae541dd419d73af02a38d9.js, requires-body=true, tag=JSON·YouTube播放器响应, argument=[{Type},{AutoCC},{ShowOnly},{Position}]
 http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dddad78d631d657adce46ae960d7ef3b5e933804ffda367f9acd3705c928a0d5.js, requires-body=true, binary-body-mode=true, tag=Proto·YouTube播放器请求, argument=[{Type},{AutoCC},{ShowOnly},{Position}]
@@ -27,7 +26,6 @@ http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*) script-path
 http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/bfe1cc1876f98997880c65a6307e5d74ec2dc407c20c7914cb5370924b83e920.js, requires-body=true, tag=YouTube合成定时文本响应, argument=
 http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/aaaa53a6ba6f24a21e31c8297acb82ee5c71be3a9037e94f9d112b3c76de1102.js, requires-body=true, tag=YouTube翻译定时文本响应, argument=
 
-# YouTube Music歌词翻译
 http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dddad78d631d657adce46ae960d7ef3b5e933804ffda367f9acd3705c928a0d5.js, requires-body=true, tag=JSON·YouTube Music浏览请求, argument=[{Type},{AutoCC},{ShowOnly},{Position}]
 http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dddad78d631d657adce46ae960d7ef3b5e933804ffda367f9acd3705c928a0d5.js, requires-body=true, binary-body-mode=true, tag=Proto·YouTube Music浏览请求, argument=[{Type},{AutoCC},{ShowOnly},{Position}]
 http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/aaaa53a6ba6f24a21e31c8297acb82ee5c71be3a9037e94f9d112b3c76de1102.js, requires-body=true, tag=JSON·YouTube Music翻译歌词响应, argument=

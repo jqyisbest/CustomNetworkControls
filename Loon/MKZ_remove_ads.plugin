@@ -11,19 +11,15 @@
 #!date=2025-05-13 15:17:08
 
 [Rewrite]
-# 阅读页面视频广告
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/read\/v\d reject-dict
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/story\/read\/v\d reject-dict
 
-# 任务激励视频
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/task\/motivate\/v\d reject-dict
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/task\/motivate\/v\d reject-dict
 
-# 我的页面 - 邀请好友、客栈魔法屋
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/user\/slide\d\/v\d\/ reject-dict
 
 [Script]
-# 配置修改
 http-response ^https:\/\/base\.mkzcdn\.com\/app\/config\/ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9fc51e223c11ac76d792063e75a18b6f0af3460122a858c956d277ccee940e91.js, requires-body=true, tag=配置修改
 
 [MitM]
