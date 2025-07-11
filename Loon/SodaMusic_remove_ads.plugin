@@ -39,7 +39,7 @@
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
 
 [Script]
-http-response ^https:\/\/beta-luna\.douyin\.com\/luna\/me\/recently-played-media\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/db6c46468142331ed1dc3feb987d78ec2f7f6e2d5164d1d8c0896f77a76e20ff.js, requires-body=true, tag=移除播放页面视频流
+http-response ^https:\/\/beta-luna\.douyin\.com\/luna\/me\/recently-played-media\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/2531c9fe6208f11080a7aaea570b93689779a9e4cbc9ab7486f8a7df9fe2603b.js, requires-body=true, tag=移除播放页面视频流
 
 [MitM]
 hostname=webcast-open.douyin.com, beta-luna.douyin.com, api.qishui.com

@@ -11,6 +11,6 @@
 #!date=2025-06-10 23:31:23
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ba775f2c3ab62a7bf41ec581837b43393047e0eb7d62d541cb5bfa8079e11959.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/74ea26399b0e00d397391ca7bab4743c45b0db9d09f844826e44b4aa61f71ea5.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
-generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a4dc72f40ab2acc8bd3b578ded3fae7c9596429140e5a254ff9d01324bfb7f0b.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1f5f5d31e95743a08d0519cd14add69d8c97ac63a88d5851869d73965e8bf3f8.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/c571f95b7d43f3ec2a0ad5acddb58d9c093ea2c126b540dc00a392804716b2bb.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
+generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ab9007d4c50835d0d84c461c497244863dcc2e3422c31f6580910242bbf12ddf.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system

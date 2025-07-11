@@ -21,7 +21,7 @@ DOMAIN, render-web.11222.cn, REJECT
 ^https:\/\/ocean\.shuqireader\.com\/api\/render\/load\/resource reject
 
 [Script]
-http-response ^https:\/\/ocean\.shuqireader\.com\/sqios\/render\/render\/page\/bookstore$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6a273714d6a8d1608222daa99c2fdd189642db5276cc8301aebc6089100d88a9.js, requires-body=true, tag=移除书城横幅和阅读广告
+http-response ^https:\/\/ocean\.shuqireader\.com\/sqios\/render\/render\/page\/bookstore$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/b3647f0da5e106d628c89ad7caea9a47857fb5e5cc61738ad6fdea0b5ced5d64.js, requires-body=true, tag=移除书城横幅和阅读广告
 
 [MitM]
 hostname=ocean.shuqireader.com, huichuan.sm.cn

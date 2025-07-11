@@ -11,7 +11,7 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
-http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1dc09f56e6aeeac0e5d5c47d99b54bae155edc3c94bdc68b188a96ecd226dd46.js, requires-body=true, tag=移除百度搜索首页信息流广告
+http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/c5a7ae3bef67c08afe54a6c49e9236165bf15b8d064384b5e09c978cb72667ca.js, requires-body=true, tag=移除百度搜索首页信息流广告
 
 [MitM]
 hostname=m.baidu.com, www.baidu.com

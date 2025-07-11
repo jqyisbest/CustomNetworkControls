@@ -20,11 +20,11 @@ TimingParameters=input, "0 0/2 * * * ?", tag=定时参数, desc=这里需要输�
 DOMAIN, testflight.apple.com, PROXY
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1585ae1b6cdf0adf97222c8bcb967458ef79f484248fc626e98c65c5f91f1787.js, tag=获取账号令牌, enable={CaptureAccountToken}
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js, tag=获取账号令牌, enable={CaptureAccountToken}
 
-http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1585ae1b6cdf0adf97222c8bcb967458ef79f484248fc626e98c65c5f91f1787.js, tag=应用ID捕获, enable={CaptureAppID}
+http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js, tag=应用ID捕获, enable={CaptureAppID}
 
-cron {TimingParameters} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/bcfe992065166561070e5d1623d187213187453933dd7f7f7efda9d449c4fc4b.js, tag=自动加入TF, timeout=180
+cron {TimingParameters} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9151a980a5a8de0a357cb559c2c2c3f6233d69df9caa73876042650594d45f39.js, tag=自动加入TF, timeout=180
 
 [MitM]
 hostname=testflight.apple.com

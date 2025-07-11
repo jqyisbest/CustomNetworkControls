@@ -14,7 +14,7 @@
 URL-REGEX, "^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native", REJECT
 
 [Script]
-http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3567fbd5a5b33139a118fa1479abb192c1108767d3d5c001f37aec7078d3b3dd.js, tag=移除首页广告
+http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/b1634469cda4f4eccbb9270d75bb867ac7185f8823da1ee6e9a1b86c292ba05e.js, tag=移除首页广告
 
 [MitM]
 hostname=114.115.217.129, home.umetrip.com

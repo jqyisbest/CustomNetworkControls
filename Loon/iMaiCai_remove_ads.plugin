@@ -20,7 +20,7 @@
 ^https:\/\/businessapi\.ksedt\.com\/signupindex\/jxlist reject-dict
 
 [Script]
-http-response ^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/24ef930663658e98eb4781d9d7c5e6de92e13b00916b45c4148483f34c357737.js, requires-body=true, tag=移除下发广告
+http-response ^https:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1560243f758f9a73bf7a8ab263e5cfb5e73679321bc968134d10d45527b2a99d.js, requires-body=true, tag=移除下发广告
 
 [MitM]
 hostname=portal-portm.meituan.com, mall.meituan.com, businessapi.ksedt.com

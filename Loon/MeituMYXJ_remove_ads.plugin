@@ -21,7 +21,7 @@ DOMAIN, adui.tg.meitu.com, REJECT
 ^https:\/\/api\.meiyan\.com\/operation\/get_config\.json\? response-body-json-replace response.function_pop.meiyan_style.is_pop false response.onoff.vip_half_window_exit_remain_popup.open 0 response.onoff.vip_home_exit_remain_popup 0
 
 [Script]
-http-response ^https:\/\/api\.meiyan\.com\/operation\/home\.json\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/bd2669c2d22c541aa4c3d6dbebc2e6d40f58ad2b9f57c68771a63b262e400d45.js, requires-body=true, tag=精简首页功能栏目并移除美颜推荐
+http-response ^https:\/\/api\.meiyan\.com\/operation\/home\.json\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/b158d39001e0c7483303257526a5c0829c0313f2ae2869b78f58c2d46bc1f8d4.js, requires-body=true, tag=精简首页功能栏目并移除美颜推荐
 
 [MitM]
 hostname=api.meiyan.com

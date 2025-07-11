@@ -19,9 +19,9 @@ MAX_RETRIES=input, "5", tag=失败重试次数, desc=仅允许填写阿拉伯数
 CRONEXP=input, "0 8 * * *", tag=定时参数, desc=这里需要输入符合CRON表达式的参数
 
 [Script]
-http-request ^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6b5af72efd4857eee17f2bd2fe3ea96f9a7473839ea3f9cd84fc66ed98e3407d.js, requires-body=true, tag=捕获Cookie, enable={CaptureCookie}
+http-request ^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d02959dd3e6428cf75a435039b265a23fcc3ad70211a46e9ba12a0ddd31c2250.js, requires-body=true, tag=捕获Cookie, enable={CaptureCookie}
 
-cron {CRONEXP} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6b5af72efd4857eee17f2bd2fe3ea96f9a7473839ea3f9cd84fc66ed98e3407d.js, tag=WPS每日签到, timeout=120, argument=[{AK},{SK},{MAX_RETRIES}]
+cron {CRONEXP} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d02959dd3e6428cf75a435039b265a23fcc3ad70211a46e9ba12a0ddd31c2250.js, tag=WPS每日签到, timeout=120, argument=[{AK},{SK},{MAX_RETRIES}]
 
 [MitM]
 hostname=moapi.wps.cn

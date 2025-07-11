@@ -11,9 +11,9 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
-http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cd1762ebae983a660f117975d29291c23b4f8b080bb617492e7cce2b3f0688be.js, requires-body=true, tag=移除开屏广告
+http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9858236b73662cb2e7afd86b4b7dd9bff9525d6fd6b7eb8a500c226834b618a2.js, requires-body=true, tag=移除开屏广告
 
-http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cd1762ebae983a660f117975d29291c23b4f8b080bb617492e7cce2b3f0688be.js, requires-body=true, tag=移除应用内广告
+http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9858236b73662cb2e7afd86b4b7dd9bff9525d6fd6b7eb8a500c226834b618a2.js, requires-body=true, tag=移除应用内广告
 
 [MitM]
 hostname=jzts.cmpassport.com, ad.mcloud.139.com

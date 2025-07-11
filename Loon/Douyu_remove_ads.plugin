@@ -27,7 +27,7 @@ DOMAIN, stun1.qvb.qcloud.com, REJECT
 ^https:\/\/venus\.douyucdn\.cn\/venus\/config\/static\/update.+keyCodeSet=flow_config response-body-json-replace greatGodGameSitterSwitch 0 followMoreAnchorEntrance 0 sdklivebanner 0 homeActFloatSwitch 0 bringGoodsSwitch 0 qqGameSwitch 0
 
 [Script]
-http-response ^https:\/\/apiv2\.douyucdn\.cn\/mgapi\/livenc\/home\/getRecV3 script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/489d2b4020b8c00ad872d35d16c98b39d137f1171720fc248a7075a8deaf11e5.js, requires-body=true, tag=移除首页轮播图和视频流广告
+http-response ^https:\/\/apiv2\.douyucdn\.cn\/mgapi\/livenc\/home\/getRecV3 script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/c2037a6bd2937364103678c626b132d2bfb0fea9de6f25495eb8779a2f52dce3.js, requires-body=true, tag=移除首页轮播图和视频流广告
 
 [MitM]
 hostname=rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn

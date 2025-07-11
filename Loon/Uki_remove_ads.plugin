@@ -19,13 +19,13 @@
 ^https:\/\/api\.chenlongtech\.cn\/v\d\/user\/checkQTSheInsurance$ reject-dict
 
 [Script]
-http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/lover\/productList script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/374e343c6e9576eaffb3a8ece4a67e8668c8e8bbb6cd7bd1e937becc7387c1f9.js, requires-body=true, tag=移除匹配卡横幅
+http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/lover\/productList script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6cf1d356d9f8222e430e69ed1fff490ceef3692740e272ad17bad15d4be18aff.js, requires-body=true, tag=移除匹配卡横幅
 
-http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/closeFriend\/home script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/374e343c6e9576eaffb3a8ece4a67e8668c8e8bbb6cd7bd1e937becc7387c1f9.js, requires-body=true, tag=移除密友横幅
+http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/closeFriend\/home script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6cf1d356d9f8222e430e69ed1fff490ceef3692740e272ad17bad15d4be18aff.js, requires-body=true, tag=移除密友横幅
 
-http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/party\/config$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/374e343c6e9576eaffb3a8ece4a67e8668c8e8bbb6cd7bd1e937becc7387c1f9.js, requires-body=true, tag=移除娱乐页面横幅和悬浮窗配置
+http-response ^https:\/\/api\.chenlongtech\.cn\/v\d\/party\/config$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6cf1d356d9f8222e430e69ed1fff490ceef3692740e272ad17bad15d4be18aff.js, requires-body=true, tag=移除娱乐页面横幅和悬浮窗配置
 
-http-response ^https:\/\/api\.chenlongtech\.cn\/v1\/post\/fetchSearchRecommend$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/374e343c6e9576eaffb3a8ece4a67e8668c8e8bbb6cd7bd1e937becc7387c1f9.js, requires-body=true, tag=移除广场搜索填充词
+http-response ^https:\/\/api\.chenlongtech\.cn\/v1\/post\/fetchSearchRecommend$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6cf1d356d9f8222e430e69ed1fff490ceef3692740e272ad17bad15d4be18aff.js, requires-body=true, tag=移除广场搜索填充词
 
 [MitM]
 hostname=api.chenlongtech.cn

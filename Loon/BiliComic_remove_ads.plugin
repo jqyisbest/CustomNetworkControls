@@ -24,8 +24,8 @@
 ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash reject-dict
 
 [Script]
-http-response ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/GetClassPageAllTabs script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3885025f78cfedd40652a6bee65fd2a398248c2cde6cad3323eece65386742b2.js, requires-body=true, tag=移除顶部标签
-http-response ^https:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3885025f78cfedd40652a6bee65fd2a398248c2cde6cad3323eece65386742b2.js, requires-body=true, tag=精简我的页面
+http-response ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/GetClassPageAllTabs script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d61358f358cf63a85776fdd4806af22f46c3c8bfe89f3134901a81fd73bb38f3.js, requires-body=true, tag=移除顶部标签
+http-response ^https:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d61358f358cf63a85776fdd4806af22f46c3c8bfe89f3134901a81fd73bb38f3.js, requires-body=true, tag=精简我的页面
 
 [MitM]
 hostname=manga.bilibili.com
