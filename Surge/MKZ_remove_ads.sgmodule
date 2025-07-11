@@ -19,7 +19,7 @@
 ^https:\/\/base\.mkzcdn\.com\/advert\/app\/user\/slide\d\/v\d\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-配置修改 = type=http-response, pattern=^https:\/\/base\.mkzcdn\.com\/app\/config\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9fc51e223c11ac76d792063e75a18b6f0af3460122a858c956d277ccee940e91.js, requires-body=true
+配置修改 = type=http-response, pattern=^https:\/\/base\.mkzcdn\.com\/app\/config\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/34857e13ac47a2ad732b213031a48184488b991e7259cbddc8881e0802b53bb3.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% base.mkzcdn.com

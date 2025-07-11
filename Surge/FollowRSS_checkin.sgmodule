@@ -10,7 +10,7 @@
 #!date=2025-05-13 15:17:08
 
 [Script]
-Follow每日签到 = type=cron, cronexp={cron}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/14585c877c96ee897fe89a9f2def211146f2132b246d0c4bfff94a27bf817250.js, timeout=120, argument="[{token},{cookie}]"
+Follow每日签到 = type=cron, cronexp={cron}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/bd8242fb639da4d2bad27e849074473df21afb43b6cad0af0238ad9f4303c48c.js, timeout=120, argument="[{token},{cookie}]"
 
 [MITM]
 hostname = %APPEND% api.follow.is

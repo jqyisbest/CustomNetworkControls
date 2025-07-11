@@ -21,7 +21,7 @@
 ^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app-user-banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-移除底栏视频标签 = type=http-response, pattern=^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_tab_red_dot\?user-tag=1$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9965f38d5752a0dc7a3f3a6763a1b3914daf0298badb5c7b13101a9292e14146.js, requires-body=true
+移除底栏视频标签 = type=http-response, pattern=^https:\/\/saas\.hpplay\.cn\/api\/lebo-desk\/endpoint\/app-resource\/app_tab_red_dot\?user-tag=1$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/6df6a61bc422d4a67151fa9293d0d943ce0c2d40dfa3451792921b5be1d31b36.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% saas.hpplay.cn
