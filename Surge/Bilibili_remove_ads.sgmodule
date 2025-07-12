@@ -9,7 +9,7 @@
 #!system_version=15
 #!loon_version=3.2.9(837)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-07-07 19:09:50
+#!date=2025-07-12 00:57:50
 
 [Rule]
 # 屏蔽B站垃圾CDN
@@ -31,6 +31,8 @@ DOMAIN-SUFFIX,chat.bilibili.com,REJECT,extended-matching,pre-matching
 
 ^https:\/\/ap[ip]\.bilibili\.com\/x\/(resource\/(top\/activity|patch\/tab)|v2\/search\/square|vip\/ads\/materials)\? data-type=text data="{"code":-404,"message":"-404","ttl":1,"data":null}" status-code=200 header="Content-Type:text/plain"
 
+^https:\/\/line3-h5-mobile-api\.biligame\.com\/game\/live\/large_card_material\? data-type=text data="{"code":0,"message":"success"}" status-code=200 header="Content-Type:text/plain"
+
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ data-type=base64 data="AAAAABMKEQgCEgl0ZWVuYWdlcnMgAioA"
 
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ data-type=base64 data="AAAAACkaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7IgAoAToAQgBKAA=="
@@ -38,7 +40,7 @@ DOMAIN-SUFFIX,chat.bilibili.com,REJECT,extended-matching,pre-matching
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/TFInfo$ data-type=base64 data="AAAAAAIIAQ=="
 
 [Script]
-body_rewrite_37 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
+body_rewrite_39 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
 
 # 处理B站垃圾CDN
 处理B站域名型垃圾CDN = type=http-request, pattern=^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4), script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js
@@ -48,10 +50,10 @@ body_rewrite_37 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/
 # 处理B站链接跟踪参数
 处理B站链接跟踪参数 = type=http-request, pattern=(?:^https:\/\/live\.bilibili\.com\/[0-9]+|^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV[A-Za-z0-9_]{10}|av[0-9]{9}))\/?\?.*, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/cbf351b78279e46b331c0285d0457c5aa9741dbd9e65eccddc63cdc926c039d2.js
 
-空降助手 = type=http-request, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d15be32fc048088c54994505e1b8638c03f8a4ddd2cba40f42014c65f1008673.js, requires-body=true, binary-body-mode=true
+空降助手 = type=http-request, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d15be32fc048088c54994505e1b8638c03f8a4ddd2cba40f42014c65f1008673.js, requires-body=true, binary-body-mode=true, argument=[{logLevel}]
 
-ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/61046eef7fea02f4f9d50c886a76175c166a53129be2385744303ea622ce0b85.js, requires-body=true, binary-body-mode=true, argument="[{showUpList}, {filterTopReplies}, {airborneDm}]"
+ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/61046eef7fea02f4f9d50c886a76175c166a53129be2385744303ea622ce0b85.js, requires-body=true, binary-body-mode=true, argument="[{showUpList}, {filterTopReplies}, {airborneDm}, {logLevel}]"
 
 [MITM]
-hostname = %APPEND% *.bilivideo.cn, *.bilivideo.com, grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com
+hostname = %APPEND% *.bilivideo.cn, *.bilivideo.com, grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
 
