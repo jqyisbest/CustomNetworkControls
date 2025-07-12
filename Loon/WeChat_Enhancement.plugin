@@ -276,7 +276,7 @@ http-response ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?cod
 http-response ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/coco/coco.js, requires-body=true, tag=COCO点单去广告
 
 # 滴滴青桔 htwkop.xiaojukeji.com
-http-response ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/62b4068c7f46fc0f9fdb0d28eee6ec358e689b093236940f36e1ddc99f97abdc.js, requires-body=true, tag=滴滴青桔去广告
+http-response ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/qingju/qingju.js, requires-body=true, tag=滴滴青桔去广告
 
 # 一点点+ cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com
 http-response ^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body=true, tag=一点点+去广告
