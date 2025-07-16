@@ -255,7 +255,7 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 # http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://kelee.one/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true, tag = 微信公众号去广告
 
 # 企迈点单系统 webapi.qmai.cn, images.qmai.cn
-http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1e8954f74110b7bdc188bf682a4008bb863011d33efbe25e31ba02f792894e2b.js, requires-body=true, tag=企迈点单系统去广告
+http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body=true, tag=企迈点单系统去广告
 
 # EMS中国邮政物流速递 @TEAXS ump.ems.com.cn
 http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/ems/ems.js, requires-body=true, tag=EMS中国邮政物流速递去广告
@@ -270,7 +270,7 @@ http-response ^https:\/\/minifm\.maxxipoint\.com\/banner\/list script-path=https
 http-response ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/lawson/lawson.js, requires-body=true, tag=罗森点点去广告
 
 # 茶颜悦色 miniapp.sexytea2013.com
-http-response ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true, tag=茶颜悦色去广告
+http-response ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8f50e073a81fd38c70809e35d5569910bb7e7091fcfe02a61d0d8f5d8b3f2887.js, requires-body=true, tag=茶颜悦色去广告
 
 # COCO点单 coco-com.e.verystar.net
 http-response ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/coco/coco.js, requires-body=true, tag=COCO点单去广告
