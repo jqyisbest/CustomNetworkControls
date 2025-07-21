@@ -8,11 +8,12 @@
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/WPS/README.md
 #!date=2025-05-13 15:17:08
+#!arguments=CaptureCookie:false,AK:"",SK:"",DAY:"1",MAX_RETRIES:"5",CRONEXP:"0 8 * * *"
 
 [Script]
 捕获Cookie = type=http-request, pattern=^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d02959dd3e6428cf75a435039b265a23fcc3ad70211a46e9ba12a0ddd31c2250.js, requires-body=true
 
-WPS每日签到 = type=cron, cronexp={CRONEXP}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d02959dd3e6428cf75a435039b265a23fcc3ad70211a46e9ba12a0ddd31c2250.js, timeout=120, argument="[{AK},{SK},{MAX_RETRIES}]"
+WPS每日签到 = type=cron, cronexp={{{CRONEXP}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d02959dd3e6428cf75a435039b265a23fcc3ad70211a46e9ba12a0ddd31c2250.js, timeout=120, argument="[{{{AK}}},{{{SK}}},{{{MAX_RETRIES}}}]"
 
 [MITM]
 hostname = %APPEND% moapi.wps.cn

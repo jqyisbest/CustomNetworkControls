@@ -8,6 +8,7 @@
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2025-07-04 16:36:19
+#!arguments=tab:false,useractivity:true
 
 [Rule]
 AND,((DOMAIN,spclient.wg.spotify.com,extended-matching),(PROTOCOL,QUIC)),REJECT
@@ -21,7 +22,7 @@ AND,((DOMAIN,guc3-spclient.spotify.com,extended-matching),(PROTOCOL,QUIC)),REJEC
 ^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-Protobuf处理 = type=http-response, pattern=^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4e8dba2035f28ce79da61945367d8ed2fb4690db139af70bc7a2f00f95c486c0.js, requires-body=true, binary-body-mode=true, timeout=5, argument="[{tab},{useractivity}]"
+Protobuf处理 = type=http-response, pattern=^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4e8dba2035f28ce79da61945367d8ed2fb4690db139af70bc7a2f00f95c486c0.js, requires-body=true, binary-body-mode=true, timeout=5, argument="[{{{tab}}},{{{useractivity}}}]"
 
 [MITM]
 hostname = %APPEND% gae2-spclient.spotify.com, guc3-spclient.spotify.com, spclient.wg.spotify.com

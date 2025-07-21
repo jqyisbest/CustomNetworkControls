@@ -8,13 +8,14 @@
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2025-05-13 15:17:08
+#!arguments=CaptureAccountToken:false,CaptureAppID:false,TimingParameters:"0 0/2 * * * ?"
 
 [Script]
 获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js
 
 应用ID捕获 = type=http-request, pattern=^https://testflight.apple.com/join/(.*), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js
 
-自动加入TF = type=cron, cronexp={TimingParameters}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9151a980a5a8de0a357cb559c2c2c3f6233d69df9caa73876042650594d45f39.js, timeout=180
+自动加入TF = type=cron, cronexp={{{TimingParameters}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9151a980a5a8de0a357cb559c2c2c3f6233d69df9caa73876042650594d45f39.js, timeout=180
 
 [MITM]
 hostname = %APPEND% testflight.apple.com
