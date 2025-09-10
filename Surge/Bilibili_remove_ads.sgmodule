@@ -44,11 +44,6 @@ AND,((DOMAIN-SUFFIX,chat.bilibili.com,extended-matching),(OR,((DOMAIN-KEYWORD,st
 [Script]
 body_rewrite_42 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
 
-# 处理B站垃圾CDN
-处理B站域名型垃圾CDN = type=http-request, pattern=^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4), script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js
-
-处理B站IP型垃圾CDN = type=http-request, pattern="^https?:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4)", script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js
-
 # 处理B站链接跟踪参数
 处理B站链接跟踪参数 = type=http-request, pattern=(?:^https:\/\/live\.bilibili\.com\/[0-9]+|^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV[A-Za-z0-9_]{10}|av[0-9]{9}))\/?\?.*, script-path=https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/cbf351b78279e46b331c0285d0457c5aa9741dbd9e65eccddc63cdc926c039d2.js
 
