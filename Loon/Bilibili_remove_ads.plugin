@@ -70,9 +70,6 @@ AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD,stun), (DOMAIN-K
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.view\.v1\.View\/TFInfo$ mock-response-body data-type=base64 data="AAAAAAIIAQ==" mock-data-is-base64=true
 
 [Script]
-# 处理B站垃圾CDN
-http-request ^https?:\/\/(?:cn-.+|.+\.mcdn)\.bilivideo\.(?:cn|com)(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js, tag = 处理B站域名型垃圾CDN
-http-request ^https?:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(?::[0-9]+)?\/(?:upgcxcode|v1\/resource)\/.*\.(?:m4s|mp4) script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/07446d9d781ba27f70a72ca474085192a39c32f2937400443fd17852e271aad7.js, tag = 处理B站IP型垃圾CDN
 # 处理B站链接跟踪参数
 http-request (?:^https:\/\/live\.bilibili\.com\/[0-9]+|^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV[A-Za-z0-9_]{10}|av[0-9]{9}))\/?\?.* script-path = https://raw.githubusercontent.com/jqyisbest/LoonKissSurge/refs/heads/main/Scripts/cbf351b78279e46b331c0285d0457c5aa9741dbd9e65eccddc63cdc926c039d2.js, tag = 处理B站链接跟踪参数
 http-request ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/25f3304e43083b31d33273df7fe121efcdf67ae1609d1defe7c8cf68b2b50761.js, requires-body=true, binary-body-mode=true, enable={airborne}, argument=[{logLevel}], tag=空降助手

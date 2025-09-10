@@ -236,4 +236,4 @@ URL-REGEX, "^http:\/\/139\.196\.12\.179:8053\/httpdns\/", REJECT
 ^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ reject
 
 [MitM]
-hostname=203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97, 2401:b180:2000:30::1c, 2401:b180:2000:20::10, amdc.alipay.com, appconf.mail.163.com, msglb.91160.com
+hostname= 2401:b180:2000:30::1c, 2401:b180:2000:20::10, amdc.alipay.com, appconf.mail.163.com, msglb.91160.com
