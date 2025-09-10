@@ -56,5 +56,5 @@ body_rewrite_39 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/
 ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a731031ad0ea7948eb788e74072c4b9f2d7c69a6cf90585e2f37a4993a616b68.js, requires-body=true, binary-body-mode=true, argument="[{{{showUpList}}}, {{{filterTopReplies}}}, {airborneDm}, {{{logLevel}}}]"
 
 [MITM]
-hostname = %APPEND% *.bilivideo.cn, *.bilivideo.com, grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
+hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
 
