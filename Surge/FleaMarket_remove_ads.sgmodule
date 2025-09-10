@@ -6,8 +6,8 @@
 #!openUrl=https://apps.apple.com/app/id510909506
 #!tag=去广告
 #!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-07-16 03:29:43
+#!homepage=https://hub.kelee.one
+#!date=2025-09-03 01:29:26
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT

@@ -6,8 +6,8 @@
 #!openUrl=https://apps.apple.com/app/id350962117
 #!tag=去广告
 #!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-07-14 22:11:40
+#!homepage=https://hub.kelee.one
+#!date=2025-08-24 19:27:15
 
 [Rule]
 DOMAIN-SUFFIX,uve.weibo.com,DIRECT,extended-matching
@@ -39,7 +39,7 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
 
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/api\.weibo\.cn\/!\/(sug\/list\/finderchange|was\/finder\/searchbarchange)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
@@ -68,7 +68,7 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
 
 移除超话搜索页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/shproxy\/chaohua\/discovery\/searchactive\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dc0eef05c006b1a859e7c12eca652571c7d3be344642311d4ec73e301c49c7e0.js, requires-body=true
 
-移除信息流广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dc0eef05c006b1a859e7c12eca652571c7d3be344642311d4ec73e301c49c7e0.js, requires-body=true
+移除信息流广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_detail(_comment)?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dc0eef05c006b1a859e7c12eca652571c7d3be344642311d4ec73e301c49c7e0.js, requires-body=true
 
 移除微博详情页广告 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/dc0eef05c006b1a859e7c12eca652571c7d3be344642311d4ec73e301c49c7e0.js, requires-body=true
 

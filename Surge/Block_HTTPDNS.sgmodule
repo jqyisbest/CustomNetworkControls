@@ -5,8 +5,8 @@
 #!category=iKeLee
 #!tag=去广告, 依赖
 #!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-06-16 12:29:05
+#!homepage=https://hub.kelee.one
+#!date=2025-08-20 00:30:31
 
 [Rule]
 DOMAIN,dns.wechat.com,REJECT,extended-matching,pre-matching
@@ -19,11 +19,6 @@ URL-REGEX,"^http:\/\/103\.44\.58\.64\/md\?",REJECT,extended-matching
 URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns",REJECT,extended-matching
 DOMAIN,dns2.q2cdn.com,REJECT,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/",REJECT,extended-matching
-IP-CIDR,8.134.241.67/32,REJECT,no-resolve,pre-matching
-DOMAIN,httpdns.volcengineapi.com,REJECT,extended-matching,pre-matching
-DOMAIN,dig.bdurl.net,REJECT,extended-matching,pre-matching
-DOMAIN,dig.zjurl.cn,REJECT,extended-matching,pre-matching
-AND,((DOMAIN-KEYWORD,tnc,extended-matching),(AND,((OR,((DOMAIN-KEYWORD,-bjlgy,extended-matching),(DOMAIN-KEYWORD,-alisc,extended-matching),(DOMAIN-KEYWORD,-aliec,extended-matching),(DOMAIN-KEYWORD,-alisg,extended-matching))),(OR,((DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)))))),REJECT,pre-matching
 DOMAIN,dns.weixin.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,dns.weixin.qq.com.cn,REJECT,extended-matching,pre-matching
 DOMAIN,aedns.weixin.qq.com,REJECT,extended-matching,pre-matching
