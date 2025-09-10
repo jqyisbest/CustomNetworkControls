@@ -1,14 +1,14 @@
 #!name=高德地图去广告
 #!desc=过滤高德地图开屏广告、各页面推广，精简我的页面。
 #!openUrl=https://apps.apple.com/app/id461703208
-#!author=jqyisbest[https://github.com/jqyisbest],RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh]
+#!author=jqyisbest[https://github.com/jqyisbest],RuCu6[https://github.com/RuCu6], kelv1n1n[https://github.com/kelv1n1n]
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.2.4(787)
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
-#!date=2025-05-22 21:41:32
+#!date=2025-09-04 23:46:49
 
 [Rule]
 # 屏蔽高德IP请求以免去广告脚本失效
@@ -28,6 +28,8 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 
 [Rewrite]
+
+
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?:car-end|route-plan) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? response-body-json-del data.commonMaterial data.tipsOperationLocation data.resourcePlacement
@@ -36,14 +38,16 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? reject-dict
 
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc) reject-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
 
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? reject-dict
+
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) reject-dict
-^https:\/\/m5-zb\.amap\.com\/ws\/boss\/pay\/web\/paySuccess\/info\/request reject-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving) reject-dict
 ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\? response-body-json-del data.carTips.data.popupInfo
 
 [Script]
@@ -63,4 +67,4 @@ http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\
 http-response ^https:\/\/(?:info|m5)\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/19b1882f8decd5f0f9cd37a7cc30e0998bf00eefeaae9945134eee0c363eb7e8.js, requires-body=true, tag=移除导航详情页推广
 
 [MitM]
-hostname=m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
+hostname=*.amap.com
