@@ -26,7 +26,7 @@ DOMAIN, gw.m.163.com, DIRECT
 [Script]
 http-response ^https:\/\/nex\.163\.com\/q script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8fd25976d1ef634ab98bb87ba027cce4800a827772522490aae5361c0d2b694c.js, requires-body=true, tag=移除网易新闻广告
 
-http-response ^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\? script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8fd25976d1ef634ab98bb87ba027cce4800a827772522490aae5361c0d2b694c.js, requires-body=true, tag=移除网易新闻广告
+http-response ^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\? script-path=https://kelee.one/Resource/JavaScript/NeteaseNews/NeteaseNews_remove_ads.js, requires-body=true, tag=移除网易新闻广告
 
 http-response ^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/search\/hot-word script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/8fd25976d1ef634ab98bb87ba027cce4800a827772522490aae5361c0d2b694c.js, requires-body=true, tag=移除网易新闻广告
 
