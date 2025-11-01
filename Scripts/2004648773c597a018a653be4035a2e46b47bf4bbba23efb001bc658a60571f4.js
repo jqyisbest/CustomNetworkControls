@@ -10,6 +10,10 @@ if (!$response.body) {
 
 let obj = JSON.parse($response.body);
 
+if (url.includes("s-api.smzdm.com/sou/list_v10") && obj.data && obj.data.rows) {
+  obj.data.rows = obj.data.rows.filter((item) => item.article_tag !== "广告" && item.article_tag !== "\u5e7f\u544a" && item.article_tag !== "文章" && item.article_tag !== "\u6587\u7ae0" && item.article_tag !== "笔记" && item.article_tag !== "\u7b14\u8bb0");
+}
+
 if (url.includes("/v3/home")) {
   const recursivelyFilterByCellType = (data) => {
     if (Array.isArray(data)) {
