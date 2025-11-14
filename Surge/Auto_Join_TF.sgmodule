@@ -1,22 +1,19 @@
 #!name=自动加入TestFlight
 #!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
-#!author=DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
+#!author=奶思[https://github.com/fmz200], DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
 #!category=iKeLee
 #!openUrl=https://apps.apple.com/app/id899247664
 #!tag=定时任务
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!date=2025-09-02 23:41:52
-#!arguments=CaptureAccountToken:false,CaptureAppID:false,TimingParameters:"0 0/2 * * * ?"
+#!date=2025-11-08 03:27:30
+#!arguments=CaptureAccountToken:false,RunTask:"false",RunMonitor:"true",TaskCron:"0 0/2 * * * ?",TaskMonitor:"0 * * * * ?"
 
 [Script]
-获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js
+获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cd9b7c24339f267358cbd7986e17f4b87196abddb35866af741baff1d463ba07.js
 
-应用ID捕获 = type=http-request, pattern=^https://testflight.apple.com/join/(.*), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/d00d8d392373b86f7ff6fd15f19f9ff94212ab0116b0ca124160a2e3c1cde112.js
+自动加入TF = type=cron, cronexp={{{TaskCron}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9eda6ac7e368cfd9c779339f8b899be4d7365cd4776a4ea15c9ed2ec608fba24.js, timeout=600
 
-自动加入TF = type=cron, cronexp={{{TimingParameters}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9151a980a5a8de0a357cb559c2c2c3f6233d69df9caa73876042650594d45f39.js, timeout=180
-
-[MITM]
-hostname = %APPEND% testflight.apple.com
+监控TF位置 = type=cron, cronexp={{{TaskMonitor}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f97aa9b42b0e355475eaa909db69d798fda05d00962fda0a7108645de6c68ca2.js, timeout=30
 
