@@ -21,8 +21,6 @@ AND,((OR,((USER-AGENT,"AMapiPhone*"),(URL-REGEX,"iphone OS*"))),(IP-CIDR,223.109
 DOMAIN-SUFFIX,m5-x.amap.com,REJECT
 DOMAIN-SUFFIX,awaken.amap.com,REJECT
 
-AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "AMapiPhone*")), REJECT
-
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
 DOMAIN-SUFFIX, v.smtcdns.com, REJECT
