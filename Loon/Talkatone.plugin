@@ -46,7 +46,6 @@ DOMAIN,ic.de.inmobi.com, REJECT
 DOMAIN,impression-asia.liftoff.io, REJECT
 DOMAIN,impression.link, REJECT
 DOMAIN,ins.track.tappx.com, REJECT
-DOMAIN,itunes.apple.com, REJECT
 DOMAIN,lh3.googleadsserving.cn, REJECT
 DOMAIN,mads.amazon-adsystem.com, REJECT
 DOMAIN,mfx.mobilefuse.com, REJECT
