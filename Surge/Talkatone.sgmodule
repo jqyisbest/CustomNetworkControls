@@ -47,7 +47,6 @@ DOMAIN,ic.de.inmobi.com,REJECT,extended-matching,pre-matching
 DOMAIN,impression-asia.liftoff.io,REJECT,extended-matching,pre-matching
 DOMAIN,impression.link,REJECT,extended-matching,pre-matching
 DOMAIN,ins.track.tappx.com,REJECT,extended-matching,pre-matching
-DOMAIN,itunes.apple.com,REJECT,extended-matching,pre-matching
 DOMAIN,lh3.googleadsserving.cn,REJECT,extended-matching,pre-matching
 DOMAIN,mads.amazon-adsystem.com,REJECT,extended-matching,pre-matching
 DOMAIN,mfx.mobilefuse.com,REJECT,extended-matching,pre-matching
