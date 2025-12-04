@@ -1,0 +1,19 @@
+#!name=IPA工具箱助手
+#!desc=这是IPA工具箱的辅助插件，用于下载IPA包和应用降级。IPA工具箱是运行在Scripting应用中的脚本，需要购买Scripting的Pro版本才能运行。
+#!openUrl=https://apps.apple.com/app/id6479691128
+#!author=小白脸
+#!tag=功能增强
+#!system=
+#!system_version=18
+#!loon_version=3.2.4(787)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IPATool.png
+#!date=2025-12-01 09:05:02
+
+[Script]
+http-request ^https:\/\/apple-api\.com script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/691372cf8af55ba29565a033327cb06ae1088077670dbdc2bc74c737bfcfcd7a.js, requires-body=true, tag=App Store API
+
+http-request ^https:\/\/xiaobai\.app script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9f16fcadb82d6ca6085715cc2d810837e8ceda1512b889af5d10bcb1fc62911f.js, tag=安装器
+
+[MitM]
+hostname=apple-api.com, xiaobai.app
