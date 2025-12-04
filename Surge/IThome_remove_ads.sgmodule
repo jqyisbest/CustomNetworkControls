@@ -7,14 +7,14 @@
 #!tag=去广告
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!date=2025-10-24 03:22:31
+#!date=2025-12-01 01:25:27
 #!arguments=removePinnedArticles:false,removeAllBanners:false
 
 [URL Rewrite]
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
 
 [Script]
-IT之家去广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+$|topmenu\/getfeeds\?), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a31b4fde903aaa114e00ee12a505df2accb79313aa6f5d67c1b3bd61b7fc7392.js, requires-body=true, argument="[{{{removeAllBanners}}},{{{removePinnedArticles}}}]"
+IT之家去广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+|topmenu\/getfeeds\?), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a31b4fde903aaa114e00ee12a505df2accb79313aa6f5d67c1b3bd61b7fc7392.js, requires-body=true, argument="[{{{removeAllBanners}}},{{{removePinnedArticles}}}]"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

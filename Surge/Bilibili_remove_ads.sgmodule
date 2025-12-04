@@ -9,8 +9,8 @@
 #!system_version=15
 #!loon_version=3.2.9(837)
 #!homepage=https://hub.kelee.one
-#!date=2025-10-22 01:24:04
-#!arguments=showUpList:"auto",purifyTopReplies:true,purifyWebpage:true,airborne:false,logLevel:"off"
+#!date=2025-11-23 20:50:36
+#!arguments=showUpList:"auto",purifyTopReplies:true,airborne:false,logLevel:"off"
 
 [Rule]
 # 屏蔽B站垃圾CDN
@@ -39,7 +39,7 @@ AND,((DOMAIN-SUFFIX,chat.bilibili.com,extended-matching),(OR,((DOMAIN-KEYWORD,st
 
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ data-type=base64 data="AAAAACkaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7IgAoAToAQgBKAA=="
 
-^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.view\.v1\.View\/TFInfo$ data-type=base64 data="AAAAAAIIAQ=="
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(view\.v1\.View\/TFInfo|viewunite\.v1\.View\/ViewEndPage)$ data-type=base64 data="AAAAAAA="
 
 [Script]
 body_rewrite_42 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
@@ -51,8 +51,6 @@ body_rewrite_42 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/
 
 ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a731031ad0ea7948eb788e74072c4b9f2d7c69a6cf90585e2f37a4993a616b68.js, requires-body=true, binary-body-mode=true, argument="[{{{showUpList}}}, {{{purifyTopReplies}}}, {{{airborne}}}, {{{logLevel}}}]"
 
-移除直播间网页广告 = type=http-response, pattern=^https:\/\/(live|www)\.bilibili\.com\/blackboard\/era\/.+\.html\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/677720786d20b64921c74854badee4e3c7ac909abe0c2c7786732b502d3904d1.js, requires-body=true
-
 [MITM]
-hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, live.bilibili.com, www.bilibili.com, line3-h5-mobile-api.biligame.com
+hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
 
