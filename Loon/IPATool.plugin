@@ -7,8 +7,8 @@
 #!system_version=18
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IPATool.png
-#!date=2025-12-01 09:05:02
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/IPATool.png
+#!date=2025-12-20 22:21:24
 
 [Script]
 http-request ^https:\/\/apple-api\.com script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/691372cf8af55ba29565a033327cb06ae1088077670dbdc2bc74c737bfcfcd7a.js, requires-body=true, tag=App Store API
