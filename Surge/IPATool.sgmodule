@@ -1,14 +1,14 @@
 #!name=IPA工具箱助手
 #!desc=这是IPA工具箱的辅助插件，用于下载IPA包和应用降级。IPA工具箱是运行在Scripting应用中的脚本，需要购买Scripting的Pro版本才能运行。
 #!author=小白脸
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/IPATool.png
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/IPATool.png
 #!category=iKeLee
 #!openUrl=https://apps.apple.com/app/id6479691128
 #!tag=功能增强
 #!system_version=18
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!date=2025-12-01 09:05:02
+#!date=2025-12-20 22:21:24
 
 [Script]
 App Store API = type=http-request, pattern=^https:\/\/apple-api\.com, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/691372cf8af55ba29565a033327cb06ae1088077670dbdc2bc74c737bfcfcd7a.js, requires-body=true
