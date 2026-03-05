@@ -249,13 +249,13 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "small_biz_fun",
     "small_biz_index",
     "small_biz_news",
-    // "splashscreen",
+    "splashscreen",
     "splashview_config",
-    "sur_bar", // 十一特惠
+    // "sur_bar", // 十一特惠
     "taxi_activity", // 打车活动
-    // "testflight_adiu",
-    // "tf_remind", // tf测试版
-    // "tips_bar_black_list",
+    "testflight_adiu",
+    "tf_remind", // tf测试版
+    "tips_bar_black_list",
     "vip"
   ];
   if (obj?.data) {
