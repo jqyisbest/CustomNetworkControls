@@ -260,10 +260,12 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   ];
   if (obj?.data) {
     for (let i of items) {
-      if("sur_bar"===i){
-        obj.data[i] = { status: 2, version: "", value: "" };
-      } else if (obj?.data?.[i]) {
-        obj.data[i] = { status: 1, version: "", value: "" };
+      if (obj?.data?.[i]) {
+        if ("sur_bar" === i) {
+          obj.data[i] = {status: 2, version: "", value: ""};
+        } else {
+          obj.data[i] = {status: 1, version: "", value: ""};
+        }
       }
     }
   }
