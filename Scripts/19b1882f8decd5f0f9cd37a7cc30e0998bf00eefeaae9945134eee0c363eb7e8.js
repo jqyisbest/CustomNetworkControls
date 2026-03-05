@@ -232,7 +232,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "route_banner", // 搜索路线 免费抽机票
     "routeresult_banner",
     "search_homepage",
-    "search_keyword",
+    // "search_keyword",
     "search_moni",
     "search_perf",
     "search_poi_recommend",
