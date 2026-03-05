@@ -251,7 +251,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "small_biz_news",
     "splashscreen",
     "splashview_config",
-    // "sur_bar", // 十一特惠
+    "sur_bar", // 十一特惠
     "taxi_activity", // 打车活动
     "testflight_adiu",
     "tf_remind", // tf测试版
@@ -260,7 +260,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   ];
   if (obj?.data) {
     for (let i of items) {
-      if (obj?.data?.[i]) {
+      if("sur_bar"===i){
+        obj.data[i] = { status: 2, version: "", value: "" };
+      } else if (obj?.data?.[i]) {
         obj.data[i] = { status: 1, version: "", value: "" };
       }
     }
