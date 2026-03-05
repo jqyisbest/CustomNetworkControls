@@ -231,13 +231,13 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "preword",
     "route_banner", // 搜索路线 免费抽机票
     "routeresult_banner",
-    // "search_homepage",
-    // "search_keyword",
-    // "search_moni",
-    // "search_perf",
-    // "search_poi_recommend",
-    // "search_service_adcode",
-    // "search_word",
+    "search_homepage",
+    "search_keyword",
+    "search_moni",
+    "search_perf",
+    "search_poi_recommend",
+    "search_service_adcode",
+    "search_word",
     "sportsGroupConfig",
     "sportsHealthConfig",
     "sportsHomeConfig",
@@ -258,13 +258,13 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "tips_bar_black_list",
     "vip"
   ];
-  if (obj?.data) {
-    for (let i of items) {
-      if (obj?.data?.[i]) {
-        obj.data[i] = { status: 1, version: "", value: "" };
-      }
-    }
-  }
+  // if (obj?.data) {
+  //   for (let i of items) {
+  //     if (obj?.data?.[i]) {
+  //       obj.data[i] = { status: 1, version: "", value: "" };
+  //     }
+  //   }
+  // }
 } else if (url.includes("/shield/search/common/coupon/info")) {
   if (obj?.data) {
     obj.data = {};
