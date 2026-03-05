@@ -228,7 +228,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "nearby_map_pull_down_guide",
     "operation_layer", // 首页右上角图层
     "poi_rec",
-    "preword",
+    // "preword",
     "route_banner", // 搜索路线 免费抽机票
     "routeresult_banner",
     "search_homepage",
@@ -237,7 +237,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "search_perf",
     "search_poi_recommend",
     "search_service_adcode",
-    // "search_word",
+    "search_word",
     "sportsGroupConfig",
     "sportsHealthConfig",
     "sportsHomeConfig",
