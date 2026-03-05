@@ -1,5 +1,5 @@
 #!name=Sub-Store
-#!desc=高级订阅管理工具，使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!desc=高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!author=Peng-YM[https://github.com/Peng-YM]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png
 #!category=iKeLee
@@ -7,14 +7,15 @@
 #!tag=订阅管理
 #!loon_version=3.2.1(749)
 #!homepage=https://hub.kelee.one
-#!date=2025-05-13 15:17:08
+#!date=2026-02-18 13:39:04
+#!arguments=cron:"55 23 * * *"
 
 [Script]
-Sub-Store Core = type=http-request, pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/4cde3782ccc842ef7ea1a0fda51433228bf213b88165c75d34fb01755ef06165.js, requires-body=true, timeout=120
+Sub-Store Core = type=http-request, pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/966e5950297fd9c8166f0e43d57592c7de94bf10e82e39e2b72d0ed4c78360a8.js, requires-body=true, timeout=120
 
-Sub-Store Simple = type=http-request, pattern=^https?:\/\/sub\.store, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/e75f6b9d12b45c65e920a81ed94e23c8939e79d7b47bee6c1eea4c74b89c4509.js, requires-body=true, timeout=120
+Sub-Store Simple = type=http-request, pattern=^https?:\/\/sub\.store, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7ded59db32c0c77c33713693decff15c179879b2e8129bb690d0abf8766c8530.js, requires-body=true, timeout=120
 
-Sub-Store Sync = type=cron, cronexp=0 0 1 ? * ?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/04eb30d0df6aabcea9f45b7e1d8c0387a5cc1692e2e76c10f92c74aa6cb812bc.js
+Sub-Store Sync = type=cron, cronexp={{{cron}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/504806e4bf45ae11edb2c8d90c283ae59fe9c86330a19d3d107c2f15d6b42a90.js, timeout=120
 
 [MITM]
 hostname = %APPEND% sub.store

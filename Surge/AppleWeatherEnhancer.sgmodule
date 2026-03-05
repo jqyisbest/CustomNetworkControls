@@ -8,21 +8,21 @@
 #!system_version=18
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!date=2025-09-11 15:47:00
-#!arguments=DataSets:"airQuality,Weather.Provider:"WeatherKit",NextHour.Provider:"ColorfulClouds",AQI.Provider:"ColorfulClouds",AQI.ReplaceProviders:"QWeather",AQI.ComparisonProvider:"Auto",AQI.Local.ReplaceScales:"HJ6332012",AQI.Local.Scale:"EPA_NowCast",AQI.Local.ConvertUnits:false,API.ColorfulClouds.Token:"",API.QWeather.Host:"devapi.qweather.com",API.QWeather.Token:"",API.WAQI.Token:"",LogLevel:"WARN"
+#!date=2026-02-25 19:48:36
+#!arguments=Weather.Provider:"ColorfulClouds",NextHour.Provider:"ColorfulClouds",AirQuality.Calculate.Algorithm:"EU_EAQI",API.ColorfulClouds.Token:"",API.QWeather.Host:"devapi.qweather.com",API.QWeather.Token:"",API.WAQI.Token:"",Storage:"Argument",LogLevel:"WARN"
 
 [Rule]
 DOMAIN,weather-analytics-events.apple.com,REJECT-DROP,extended-matching,pre-matching
 DOMAIN,tether.edge.apple,REJECT-DROP,extended-matching,pre-matching
 DOMAIN-SUFFIX,tthr.apple.com,REJECT-DROP,extended-matching,pre-matching
-AND,((OR,((IP-CIDR,17.0.0.0/8,no-resolve),(IP-CIDR6,2620:149::/32,no-resolve))),(PROTOCOL,QUIC)),REJECT
+AND,((IP-ASN,714,no-resolve),(PROTOCOL,QUIC)),REJECT-DROP
 
 [Script]
-Availability响应处理 = type=http-response, pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/c5081b7673a9677fc9860c9f9c9ef60a8b9752c7973cd57275290a70fbac5659.js, requires-body=true, argument="[{{{DataSets}}},{{{Weather.Provider}}},{{{NextHour.Provider}}},{{{AQI.Provider}}},{{{AQI.ReplaceProviders}}},{{{AQI.ComparisonProvider}}},{{{AQI.Local.ReplaceScales}}},{{{AQI.Local.Scale}}},{{{AQI.Local.ConvertUnits}}},{{{API.ColorfulClouds.Token}}},{{{API.QWeather.Host}}},{{{API.QWeather.Token}}},{{{API.WAQI.Token}}},{{{LogLevel}}}]"
+天气可用性响应 = type=http-response, pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/005480b2f3e721146d432569b1af3112b017d5a13941107327a8023de19f6bdf.js, requires-body=true, argument="[{{{Weather.Provider}}},{{{NextHour.Provider}}},{{{AirQuality.Calculate.Algorithm}}},{{{API.ColorfulClouds.Token}}},{{{API.QWeather.Host}}},{{{API.QWeather.Token}}},{{{API.WAQI.Token}}},{{{Storage}}},{{{LogLevel}}}]"
 
-Weather请求处理 = type=http-request, pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/19382ce2e8be2895b4479fbe6f99556573c6fcee9d9941bebeafbdb957850f71.js, argument="[{{{DataSets}}},{{{Weather.Provider}}},{{{NextHour.Provider}}},{{{AQI.Provider}}},{{{AQI.ReplaceProviders}}},{{{AQI.ComparisonProvider}}},{{{AQI.Local.ReplaceScales}}},{{{AQI.Local.Scale}}},{{{AQI.Local.ConvertUnits}}},{{{API.ColorfulClouds.Token}}},{{{API.QWeather.Host}}},{{{API.QWeather.Token}}},{{{API.WAQI.Token}}},{{{LogLevel}}}]"
+天气可用性响应 = type=cron, cronexp="http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ requires-body=true, script-path =", script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/005480b2f3e721146d432569b1af3112b017d5a13941107327a8023de19f6bdf.js, timeout=120, wake-system=1
 
-Weather响应处理 = type=http-response, pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/c5081b7673a9677fc9860c9f9c9ef60a8b9752c7973cd57275290a70fbac5659.js, requires-body=true, binary-body-mode=true, argument="[{{{DataSets}}},{{{Weather.Provider}}},{{{NextHour.Provider}}},{{{AQI.Provider}}},{{{AQI.ReplaceProviders}}},{{{AQI.ComparisonProvider}}},{{{AQI.Local.ReplaceScales}}},{{{AQI.Local.Scale}}},{{{AQI.Local.ConvertUnits}}},{{{API.ColorfulClouds.Token}}},{{{API.QWeather.Host}}},{{{API.QWeather.Token}}},{{{API.WAQI.Token}}},{{{LogLevel}}}]"
+天气响应 = type=http-response, pattern=^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/005480b2f3e721146d432569b1af3112b017d5a13941107327a8023de19f6bdf.js, requires-body=true, binary-body-mode=true, argument="[{{{Weather.Provider}}},{{{NextHour.Provider}}},{{{AirQuality.Calculate.Algorithm}}},{{{API.ColorfulClouds.Token}}},{{{API.QWeather.Host}}},{{{API.QWeather.Token}}},{{{API.WAQI.Token}}},{{{Storage}}},{{{LogLevel}}}]"
 
 [MITM]
 hostname = %APPEND% weatherkit.apple.com
