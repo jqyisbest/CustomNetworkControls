@@ -8,7 +8,7 @@
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Node_detection_tool.png
-#!date=2025-06-10 23:31:23
+#!date=2026-03-01 20:36:46
 
 [Script]
 generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1f5f5d31e95743a08d0519cd14add69d8c97ac63a88d5851869d73965e8bf3f8.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
