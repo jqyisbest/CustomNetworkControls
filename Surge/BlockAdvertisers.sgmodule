@@ -3,10 +3,10 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!category=iKeLee
-#!tag=去广告, 依赖
+#!category=去广告, 依赖
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
-#!date=2026-03-03 10:07:10
+#!date=2026-03-25 20:36:30
 
 [Rule]
 DOMAIN-KEYWORD,adstrategy,REJECT,extended-matching,pre-matching
@@ -296,6 +296,9 @@ DOMAIN-SUFFIX,mentamob.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,advlion.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,shanghailingye.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,shenshiads.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,adshenshi.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,qidianad.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,kuaichuanad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching

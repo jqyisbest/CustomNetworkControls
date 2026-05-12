@@ -4,16 +4,17 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
 #!category=iKeLee
 #!openUrl=https://apps.apple.com/app/id899247664
-#!tag=定时任务
+#!category=定时任务
 #!loon_version=3.2.4(787)
 #!homepage=https://hub.kelee.one
 #!date=2025-11-08 03:27:30
-#!arguments=CaptureAccountToken:false,RunTask:"false",RunMonitor:"true",TaskCron:"0 0/2 * * * ?",TaskMonitor:"0 * * * * ?"
+#!arguments=CaptureAccountToken:#,RunTask:#,RunMonitor:#,TaskCron:"0 0/2 * * * ?",TaskMonitor:"0 * * * * ?"
+#!arguments-desc=CaptureAccountToken: 捕获账号令牌\n此开关控制插件是否捕获账户令牌\n\nRunTask: 自动加入TF\n此开关控制是否启动定时任务\n\nRunMonitor: 监控TF位置\n此开关控制是否启动定时任务\n\nTaskCron: 加入TF定时参数\n这里需要输入符合CRON表达式的参数\n\nTaskMonitor: 监控TF定时参数\n这里需要输入符合CRON表达式的参数
 
 [Script]
-获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cd9b7c24339f267358cbd7986e17f4b87196abddb35866af741baff1d463ba07.js
+{{{CaptureAccountToken}}}获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/cd9b7c24339f267358cbd7986e17f4b87196abddb35866af741baff1d463ba07.js
 
-自动加入TF = type=cron, cronexp={{{TaskCron}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9eda6ac7e368cfd9c779339f8b899be4d7365cd4776a4ea15c9ed2ec608fba24.js, timeout=600
+{{{RunTask}}}自动加入TF = type=cron, cronexp="{{{TaskCron}}}", script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/9eda6ac7e368cfd9c779339f8b899be4d7365cd4776a4ea15c9ed2ec608fba24.js, timeout=600
 
-监控TF位置 = type=cron, cronexp={{{TaskMonitor}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f97aa9b42b0e355475eaa909db69d798fda05d00962fda0a7108645de6c68ca2.js, timeout=30
+{{{RunMonitor}}}监控TF位置 = type=cron, cronexp="{{{TaskMonitor}}}", script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/f97aa9b42b0e355475eaa909db69d798fda05d00962fda0a7108645de6c68ca2.js, timeout=30
 

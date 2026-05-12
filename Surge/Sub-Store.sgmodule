@@ -4,18 +4,19 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/Sub-Store.png
 #!category=iKeLee
 #!openUrl=https://sub.store
-#!tag=订阅管理
+#!category=订阅管理
 #!loon_version=3.2.1(749)
 #!homepage=https://hub.kelee.one
 #!date=2026-02-18 13:39:04
 #!arguments=cron:"55 23 * * *"
+#!arguments-desc=cron: 定时参数\n这里需要输入符合CRON表达式的参数
 
 [Script]
 Sub-Store Core = type=http-request, pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/966e5950297fd9c8166f0e43d57592c7de94bf10e82e39e2b72d0ed4c78360a8.js, requires-body=true, timeout=120
 
 Sub-Store Simple = type=http-request, pattern=^https?:\/\/sub\.store, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7ded59db32c0c77c33713693decff15c179879b2e8129bb690d0abf8766c8530.js, requires-body=true, timeout=120
 
-Sub-Store Sync = type=cron, cronexp={{{cron}}}, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/504806e4bf45ae11edb2c8d90c283ae59fe9c86330a19d3d107c2f15d6b42a90.js, timeout=120
+Sub-Store Sync = type=cron, cronexp="{{{cron}}}", script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/504806e4bf45ae11edb2c8d90c283ae59fe9c86330a19d3d107c2f15d6b42a90.js, timeout=120
 
 [MITM]
 hostname = %APPEND% sub.store

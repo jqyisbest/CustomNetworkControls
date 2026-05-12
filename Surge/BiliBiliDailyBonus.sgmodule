@@ -4,15 +4,16 @@
 #!icon=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/database/icon_Avatar.png
 #!category=iKeLee
 #!homepage=https://github.com/ClydeTime/BiliBili/tree/master
-#!arguments=扫码Cookie:false,APPCookie:true,bigPoint:false
+#!arguments=扫码Cookie:#,APPCookie:,bigPoint:#
+#!arguments-desc=扫码Cookie: [开关] 扫码Cookie\n是否启用此处修改\n\nAPPCookie: [开关] APPCookie\n是否启用此处修改\n\nbigPoint: [开关] 观看剧集大积分\n是否启用此处修改
 
 [Script]
 # BiliBili每日等级任务
 B站每日等级任务 = type=cron, cronexp=30 7 * * *, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1a2a49e765ee8474dbca95195115f29b4bdc9671374f1ce1b740cc2b0297b55e.js, timeout=15
 
-B站Cookie(扫码) = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1a2a49e765ee8474dbca95195115f29b4bdc9671374f1ce1b740cc2b0297b55e.js, timeout=30
+{{{扫码Cookie}}}B站Cookie(扫码) = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1a2a49e765ee8474dbca95195115f29b4bdc9671374f1ce1b740cc2b0297b55e.js, timeout=30
 
-B站Cookie(APP) = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1a2a49e765ee8474dbca95195115f29b4bdc9671374f1ce1b740cc2b0297b55e.js
+{{{APPCookie}}}B站Cookie(APP) = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/1a2a49e765ee8474dbca95195115f29b4bdc9671374f1ce1b740cc2b0297b55e.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com
