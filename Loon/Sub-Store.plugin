@@ -18,9 +18,7 @@ cron=input, "55 23 * * *", tag=定时参数, desc=这里需要输入符合CRON�
 
 [Script]
 http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/966e5950297fd9c8166f0e43d57592c7de94bf10e82e39e2b72d0ed4c78360a8.js, requires-body=true, timeout=120, tag=Sub-Store Core
-
 http-request ^https?:\/\/sub\.store script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7ded59db32c0c77c33713693decff15c179879b2e8129bb690d0abf8766c8530.js, requires-body=true, timeout=120, tag=Sub-Store Simple
-
 cron {cron} script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/504806e4bf45ae11edb2c8d90c283ae59fe9c86330a19d3d107c2f15d6b42a90.js, timeout=120, tag=Sub-Store Sync
 
 [MitM]
