@@ -5,9 +5,9 @@
 #!category=iKeLee
 #!openUrl=http://boxjs.com
 #!category=数据管理
-#!loon_version=3.2.4(787)
+#!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!date=2025-05-13 15:17:08
+#!date=2026-06-01 17:11:35
 
 [Script]
 BoxJS = type=http-request, pattern=^https?:\/\/(.+\.)?boxjs\.(com|net), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/7055226f4f1d8737245b28b7d05289f1b42880a418825ead3fe101b538e87409.js, requires-body=true, timeout=120

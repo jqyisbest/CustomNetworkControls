@@ -5,9 +5,9 @@
 #!category=iKeLee
 #!openUrl=http://127.0.0.1:9101/
 #!category=资源转换
-#!loon_version=3.2.1(749)
+#!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!date=2026-04-30 16:28:27
+#!date=2026-06-01 17:11:35
 
 [Script]
 前端界面 = type=http-request, pattern=^https?:\/\/script\.hub\/($|edit\/|reload), script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/71d45f38fd72e70b8702875677ca5a6379955faf60d51240edf3458bb678c900.js, timeout=300, 

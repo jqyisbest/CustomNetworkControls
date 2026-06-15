@@ -5,9 +5,9 @@
 #!category=iKeLee
 #!openUrl=https://apps.apple.com/app/id414245413
 #!category=功能增强
-#!loon_version=3.2.4(787)
+#!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!date=2025-05-15 05:41:50
+#!date=2026-06-01 17:11:35
 
 [Script]
 捕获令牌 = type=http-request, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/3ba55f6f84e25afbc76ae84089c1321e6290977e5c8d45ee1d540e235b105862.js, requires-body=true, timeout=10
