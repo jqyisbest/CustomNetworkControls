@@ -5,10 +5,10 @@
 #!tag=去广告, 依赖
 #!system=
 #!system_version=
-#!loon_version=3.2.4(787)
+#!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
-#!date=2026-05-17 17:24:28
+#!date=2026-06-12 14:11:07
 
 [Rule]
 DOMAIN,dns.wechat.com,REJECT-NO-DROP
@@ -213,5 +213,7 @@ URL-REGEX, "^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/", REJECT
 
 ^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? reject-dict
 
+^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\? reject-dict
+
 [MitM]
-hostname=appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn
+hostname=appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com

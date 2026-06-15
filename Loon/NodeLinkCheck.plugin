@@ -5,10 +5,10 @@
 #!tag=节点检测
 #!system=
 #!system_version=
-#!loon_version=3.2.4(787)
+#!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Stack.png
-#!date=2025-05-13 15:17:08
+#!date=2026-06-01 17:11:35
 
 [Script]
 generic script-path = https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/a7b88cfe2324ba7afa71be6d8c023bebde410bb93224436f0ef1569388db4cab.js, tag=代理链路检测,img-url=link.circle.system
