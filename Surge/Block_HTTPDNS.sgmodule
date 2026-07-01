@@ -6,7 +6,7 @@
 #!category=去广告, 依赖
 #!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!date=2026-06-12 14:11:07
+#!date=2026-07-01 10:51:17
 
 [Rule]
 DOMAIN,dns.wechat.com,REJECT-NO-DROP,extended-matching,pre-matching
@@ -115,6 +115,8 @@ DOMAIN,dotserver.douyucdn.cn,REJECT,extended-matching,pre-matching
 DOMAIN,hdns.ksyun.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.push.oppomobile.com,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.ocloud.oppomobile.com,REJECT,extended-matching,pre-matching
+DOMAIN,cdndns.kwd.inkuai.com,REJECT,extended-matching,pre-matching
+DOMAIN,hdns.k-dyn.com,REJECT,extended-matching,pre-matching
 DOMAIN,kuaishou.httpdns.pro,REJECT,extended-matching,pre-matching
 DOMAIN,httpdns.kwd.inkuai.com,REJECT,extended-matching,pre-matching
 DOMAIN,apidns.kwd.inkuai.com,REJECT,extended-matching,pre-matching
@@ -156,6 +158,7 @@ IP-CIDR,81.71.61.216/32,REJECT,no-resolve,pre-matching
 DOMAIN,httpdns.immomo.com,REJECT,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d+\/httpdns\/",REJECT,extended-matching
 URL-REGEX,"^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/",REJECT,extended-matching
+DOMAIN,httpdns.zybang.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 ^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp - reject
