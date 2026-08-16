@@ -7,7 +7,7 @@
 #!category=去广告
 #!loon_version=3.5.0(969)
 #!homepage=https://hub.kelee.one
-#!date=2026-06-22 19:19:25
+#!date=2026-07-11 20:21:39
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?",extended-matching),(USER-AGENT,"*com.xunmeng.pinduoduo*")),REJECT
@@ -82,6 +82,8 @@ body_rewrite_55 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/ap
 
 body_rewrite_56 = type=http-response, pattern=^https:\/\/api\.pinduoduo\.com\/order\/, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22marketing_banner_vo%22%2C%22shipping.banner_above_recommend%22%5D%5D%5D
 
+移除扫码取件页面商品推荐及弹窗 = type=http-response, pattern=^https:\/\/m\.pinduoduo\.net\/mdkd\/package\?from_app_scan, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/ea8de3d9034591b64f4f58078f5af36133f9b76e0c1520d1b1df429534a7d866.js, requires-body=true
+
 [MITM]
-hostname = %APPEND% api.pinduoduo.com
+hostname = %APPEND% api.pinduoduo.com, m.pinduoduo.net
 
