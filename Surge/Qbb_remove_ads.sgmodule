@@ -1,0 +1,22 @@
+#!name=亲宝宝去广告
+#!desc=移除开屏广告、弹窗广告、广告下发、用户行为上报，精简搜索页、育儿页和我的页面，拦截商城页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Qbb.png
+#!category=iKeLee
+#!openUrl=https://apps.apple.com/app/id672984826
+#!category=去广告
+#!loon_version=3.5.1(980)
+#!homepage=https://hub.kelee.one
+#!date=2026-08-26 11:08:19
+
+[Rule]
+DOMAIN,apimall.qbb6.com,REJECT,extended-matching,pre-matching
+
+[Script]
+精简我的页面 = type=http-response, pattern=^https:\/\/api\.qbb6\.com\/commons\/self\/button\/group\/get\/v\d\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/31c8920e3bcc5e878f941d70ef6380df9187141961e1559bbc858fa0d101e675.js, requires-body=true
+
+精简育儿页面 = type=http-response, pattern=^https:\/\/apipt\.qbb6\.com\/parenting\/pt\/homepage\/get\/v\d\?, script-path=https://raw.githubusercontent.com/jqyisbest/CustomNetworkControls/refs/heads/main/Scripts/06a7c2ac7feb3dfb7512f21cc2534d0b5ec64cb9cbd428b14006f8c50a457f4c.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% api.qbb6.com, apicommunity.qbb6.com, apipt.qbb6.com, apiuser.qbb6.com, apimall.qbb6.com
+

@@ -6,7 +6,7 @@
 #!category=去广告, 依赖
 #!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!date=2026-07-12 23:46:27
+#!date=2026-08-22 10:20:51
 
 [Rule]
 DOMAIN-KEYWORD,adstrategy,REJECT,extended-matching,pre-matching
@@ -270,6 +270,7 @@ DOMAIN-SUFFIX,66mobi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,xdplt.com,REJECT,extended-matching,pre-matching
 DOMAIN,ads.cup.com.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adjust.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,adjust.io,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,adjust.net.in,REJECT,extended-matching,pre-matching
 DOMAIN,app-analytics-services.com,REJECT,extended-matching,pre-matching
 DOMAIN,odm.app-ads-services.com,REJECT,extended-matching,pre-matching
